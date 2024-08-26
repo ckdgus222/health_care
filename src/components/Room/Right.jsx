@@ -66,7 +66,7 @@ const Right = ({ data, onClick, isModalOpen }) => {
         <div className="care_right">
           <img src={`/images/side-img/fluid_${data.fluid_status}.gif`} alt="" />
         </div>
-        <div className="care_left_text">
+        <div className={`care_right_text right_${data.fluid_status}`}>
           5%
           <br />
           3M
