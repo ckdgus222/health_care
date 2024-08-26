@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { Selected } from "../../App"
 
 
-const fieldSelect = ["전체","수액","난간","심박","예약","산소","i-care"]
+const fieldSelect = ["전체","난간","수액G","수액A","수액C","산소","수행","I-care"]
 
 const Fieldset = () =>{
   const [selected, setSelected] = useState(null)

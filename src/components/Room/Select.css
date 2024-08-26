@@ -1,0 +1,13 @@
+.select_box{
+   width: 150px;
+   height: 70px;
+   position: absolute;
+   padding: 10px;
+   z-index: 9999;
+}
+
+/*
+ name
+ deptName
+  patSex
+*/

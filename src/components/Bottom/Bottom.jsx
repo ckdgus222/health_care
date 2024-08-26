@@ -1,6 +1,7 @@
 import "./Bottom.css"
 import { useNavigate } from "react-router-dom"
 
+
 // status 실시간 연동
 
 

@@ -31,6 +31,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -64,6 +65,7 @@
         "callYes": 1,
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -92,11 +94,12 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
     {
@@ -125,11 +128,12 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 8,
         "fluidAlert": 1,
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "Yes"
     },
     {
@@ -158,11 +162,12 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "no"
     },
     {
@@ -196,6 +201,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "Yes"
     },
     {
@@ -229,6 +235,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "no"
     },
     {
@@ -262,6 +269,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "Yes"
     },
     {
@@ -295,6 +303,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
     {
@@ -328,6 +337,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -361,6 +371,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -394,6 +405,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
     {
@@ -427,6 +439,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -460,6 +473,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "Yes"
     },
     {
@@ -493,6 +507,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "no"
     },
     {
@@ -526,6 +541,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "Yes"
     },
     {
@@ -559,6 +575,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "no"
     },
     {
@@ -592,6 +609,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "Yes"
     },
     {
@@ -625,6 +643,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "Yes"
     },
     {
@@ -658,6 +677,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "Yes"
     },
     {
@@ -691,6 +711,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "no"
     },
     {
@@ -724,6 +745,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "Yes"
     },
     {
@@ -757,6 +779,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "no"
     },
     {
@@ -790,6 +813,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "Yes"
     },
     {
@@ -823,6 +847,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -856,6 +881,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -889,6 +915,7 @@
         "callYes": 1,
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
     {
@@ -922,6 +949,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
     {
@@ -955,6 +983,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -988,6 +1017,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "no"
     },
     {
@@ -1021,6 +1051,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
     {
@@ -1054,6 +1085,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "1",
         "fluid": "Yes"
     },
     {
@@ -1087,6 +1119,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "1",
         "fluid": "Yes"
     },
     {
@@ -1120,6 +1153,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "1",
         "fluid": "Yes"
     },
     {
@@ -1153,6 +1187,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "1",
         "fluid": "no"
     },
     {
@@ -1186,6 +1221,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "1",
         "fluid": "no"
     },
     {
@@ -1219,6 +1255,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "Yes"
     },
     {
@@ -1252,6 +1289,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
     {
@@ -1285,6 +1323,7 @@
       "callYes": "",
       "fallDown": "",
       "skinSore": "",
+      "fluid_G" : "1",
       "fluid": "no"
   },
     {
@@ -1318,6 +1357,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
     {
@@ -1351,6 +1391,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "Yes"
     },
     {
@@ -1384,6 +1425,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "no"
     },
     {
@@ -1417,6 +1459,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "Yes"
     },
   {
@@ -1450,6 +1493,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "Yes"
     },
     {
@@ -1483,6 +1527,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_C" : "3",
         "fluid": "no"
     },
     {
@@ -1516,6 +1561,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
     },
   
@@ -1550,6 +1596,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_G" : "1",
         "fluid": "Yes"
         
     },
@@ -1584,6 +1631,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
+        "fluid_A" : "2",
         "fluid": "Yes"
     }
   ]

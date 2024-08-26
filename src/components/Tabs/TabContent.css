@@ -9,3 +9,8 @@
   left: 60%;
   transform: translate(-50%, -50%);
 }
+.tab_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

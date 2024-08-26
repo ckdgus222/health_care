@@ -1,0 +1,12 @@
+.tab_header{
+   background-color: gray;
+   display: flex;
+   height: 30px;
+   justify-content: space-between;
+   padding: 10px 10px;
+   border-radius: 5px;
+}
+.tab_header_close{
+   position: relative;
+   top: -5px;
+}

@@ -4,21 +4,21 @@ import Fieldset from "./Fieldset";
 import ViewName from "./ViewName";
 import Menus from "./Menus";
 import Setting from "./Setting";
-import "./HeaderContainer.css"
+import "./HeaderContainer.css";
 
+const HeaderContainer = ({ setSelects, setMenuTab, setTab, menuTab }) => {
 
-const HeaderContainer = ({setMenuTab, setTab ,menuTab}) =>{
-   return(
-      <div className="main">
-         <Header>
-            <Eums/>
-            <ViewName/>
-            <Fieldset/>
-            <Menus menuTab={menuTab} setMenuTab={setMenuTab} setTab={setTab}/> 
-            <Setting/>
-         </Header>
-      </div>
-   )
-}
+  return (
+    <div className="main">
+      <Header>
+        <Eums />
+        <ViewName setSelects={setSelects} />
+        <Fieldset />
+        <Menus menuTab={menuTab} setMenuTab={setMenuTab} setTab={setTab} />
+        <Setting />
+      </Header>
+    </div>
+  );
+};
 
-export default HeaderContainer
+export default HeaderContainer;

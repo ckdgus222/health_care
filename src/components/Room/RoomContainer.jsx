@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { Health } from "./../../App";
 import TabContent from "../Tabs/TabContent";
 
-const RoomContainer = ({ menuTab, isTab, setTab }) => {
+const RoomContainer = ({ selects,menuTab, isTab, setTab }) => {
   const { data } = useContext(Health);
 
   const chunkedData = [];
@@ -17,14 +17,14 @@ const RoomContainer = ({ menuTab, isTab, setTab }) => {
     <div className="container" onClick={()=> setTab(false)}>
       {isTab && (
         <div onClick={(e) => e.stopPropagation()}>
-          <TabContent menuTab={menuTab} />
+          <TabContent menuTab={menuTab} setTab={setTab} />
         </div>
       )}
       <div className="roomContainer">
         {chunkedData.map((group, index) => {
           const leftData = group.filter((item) => item.NO % 2 === 0);
           const rightData = group.filter((item) => item.NO % 2 !== 0);
-          return <RoomBox key={index} leftData={leftData} rightData={rightData} data={data} room={index} />;
+          return <RoomBox key={index} selects={selects} leftData={leftData} rightData={rightData} data={data} room={index} />;
         })}
       </div>
     </div>
