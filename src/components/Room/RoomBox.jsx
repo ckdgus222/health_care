@@ -61,7 +61,7 @@ const RoomBox = ({ leftData, rightData, data, room, selects }) => {
       <div className="right-column">
         {filterRight.map((item) => (
           <div key={`right-container-${item.NO}`} className="right-container">
-            {selects ? <Select data={item} /> : null}
+            {selects ? <Select margin={"marginReft"} data={item} /> : null}
             <Right key={`right-${item.NO}`} data={item} onClick={handlePatientClick} isModalOpen={isModalOpen} />
           </div>
         ))}

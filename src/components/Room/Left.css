@@ -15,11 +15,14 @@
 .care_left > img{
    width: 20px;
 }
+.bedContainer:hover .left_hover{
+   display: block;
+}
 .left_hover{
    display: none;
    position: absolute;
-   top: 5px;
-   left: 150px;
+   top: 3px;
+   left: 156px;
    width: 200px;
    height: 100px;
    border: 1px solid gray;

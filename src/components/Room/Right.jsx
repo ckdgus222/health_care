@@ -80,7 +80,7 @@ const Right = ({ data, onClick, isModalOpen }) => {
           {data.breathRate}
         </div>
       </div>
-      <div className={`right_hover ${stateClick}`}>
+      <div className={`right_hover`}>
         <p>
           <span>{data.roomNumber}</span> {data.patName}
         </p>

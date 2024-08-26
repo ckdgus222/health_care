@@ -31,17 +31,11 @@ const Left = ({ data, onClick,isModalOpen }) => {
     setOrder(updatedOrder); // 상태 한 번에 업데이트
   }, [data]);
 
-  const hoverText =()=>{
-    if(isModalOpen === true){
-      setStateClick(null)
-    }else{
-      setStateClick((prev) => prev ? null : "active")
-    }
-  }
+
 
 
   return (
-    <div className="bedContainer" onClick={()=> hoverText()} onDoubleClick={() =>  onClick(data, order)}>
+    <div className="bedContainer"  onDoubleClick={() =>  onClick(data, order)}>
       <div className="bed" style={{ backgroundImage: `url(/images/Back-img/bed/${bedStatus(data.barStatus)})` }}>
         <img style={{ width: "100%" }} src={`/images/Image/${data.positionStatus}.gif`} />
       </div>
@@ -80,7 +74,7 @@ const Left = ({ data, onClick,isModalOpen }) => {
           {data.breathRate}
         </div>
       </div>
-      <div className={`left_hover ${stateClick}`}>
+      <div className={`left_hover`}>
         <p>
           <span>{data.roomNumber}</span> {data.patName}
         </p>
