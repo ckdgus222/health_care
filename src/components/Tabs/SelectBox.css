@@ -1,0 +1,20 @@
+.tab_box{
+   width: 55px;
+   height: 55px;
+   border-top-left-radius: 20px ;
+   border-top-right-radius: 20px;
+   background-color: #fff;
+   position: absolute;
+   top: -35px;
+   right: 260px;
+   border: none;
+}
+
+
+ /*
+ 환자정보 : 516px
+ 에약관리 : 450px
+ 처치관리 : 383px
+ 연결관리 : 317px
+ i-care : 260px
+*/

@@ -1,0 +1,32 @@
+import RoomMain from "./pages/RoomMain";
+import Acting from "./pages/Acting";
+import "./App.css";
+import { createContext } from "react";
+import { Routes, Route } from "react-router-dom";
+import data from "./Data.json";
+import { useState } from "react";
+
+//react router 설치
+
+export const Health = createContext();
+export const Selected = createContext();
+
+function App() {
+  const [category, setCategory] = useState("");
+  
+
+ 
+
+  return (
+    <Health.Provider value={{ data }}>
+      <Selected.Provider value={{ category, setCategory }}>
+        <Routes>
+          <Route path="/" element={<RoomMain />} />
+          <Route path="/acting" element={<Acting />} />
+        </Routes>
+      </Selected.Provider>
+    </Health.Provider>
+  );
+}
+
+export default App;

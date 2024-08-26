@@ -1,0 +1,32 @@
+.side-box {
+  border: 1px solid #2f2e2e;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 두 열로 나누기 */
+  grid-template-rows: 31% 31% 31% 7%;
+  max-width: 100%;
+  background-color: black;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
+}
+.gird-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+}
+

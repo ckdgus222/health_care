@@ -1,0 +1,74 @@
+.modal_container{
+   background-color: antiquewhite;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   opacity: 0;
+   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+   background-color: rgb(132, 120, 120);
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   z-index: 1000;
+   width: 80%;
+   height: 60%;
+   max-width: 1200px;
+   max-height: 600px;
+   overflow-y: auto;
+
+}
+
+.modal_open {
+   transform: translate(-50%, -50%) scale(1); /* 원래 크기로 */
+   opacity: 1; /* 불투명하게 설정 */
+ }
+
+.modal_box{
+   color: black;
+}
+
+.modal_overlay{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.5);
+   transition: opacity 0.3s ease-out;
+   z-index: 999;
+}
+
+.modal_patient{
+   width: 500px;
+   display: flex;
+}
+.bedContainer_right_modal{
+   width: 500px;
+}
+.care_right_modal > img{
+   width: 150px;
+   height: 150px;
+}
+.care_left_text_modal{
+   font-size: 60px;
+}
+.care_right_text_modal{
+   font-size: 60px;
+}
+
+.modal_status{
+   width: 300px;
+}
+.modal_status > p{
+   width: 200px;
+}
+
+/* 
+
+
+.care_right_modal_Box{}
+.care_left_modal_text{
+
+}
+.care_right_img */

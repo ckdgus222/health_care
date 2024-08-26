@@ -1,0 +1,11 @@
+.nav_head{
+   height: 100%;
+   display: flex;
+   gap: 150px;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   padding-left: 10px;
+   padding-right: 10px;
+}

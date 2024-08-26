@@ -1,0 +1,37 @@
+.bedContainer_right{
+   width: 150px;
+   position: relative;
+}
+.bed{
+   background-image: url("./../../../public/images/Back-img/0001.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+
+}
+.bed .right_img{
+   transform: scaleX(-1);
+}
+
+.care_rightBox{
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.care_right > img{
+   width: 20px;
+}
+.right_hover{
+   display: none;
+   position: absolute;
+   top: 5px;
+   right: 150px;
+   width: 200px;
+   height: 100px;
+   border: 3px solid gray;
+   border-radius: 10px;
+   background-color: #fff;
+   color: black;
+}
+.bedContainer_right:hover .right_hover{
+   display: block;
+}

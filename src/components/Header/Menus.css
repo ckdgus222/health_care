@@ -1,0 +1,20 @@
+.menuBox{
+   display: flex;
+   align-items: center;
+}
+
+
+
+.menuList{
+   display: flex;
+   gap: 10px;
+   color: #fff;
+   cursor: pointer;
+}
+.list{
+   font-size: 16px;
+   font-weight: bold;
+}
+.list:hover{
+   color: yellow;
+}

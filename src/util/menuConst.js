@@ -1,0 +1,1 @@
+export const menuList = ["환자정보","예약관리","처치관리","연결관리","i-care"]

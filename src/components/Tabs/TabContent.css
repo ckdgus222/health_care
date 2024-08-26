@@ -1,0 +1,11 @@
+.tab_container {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 20px;
+  width: 1250px;
+  height: 90%;
+  z-index: 99999999;
+  top: 45.5%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}

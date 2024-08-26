@@ -1,0 +1,16 @@
+.room-box{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 3px;
+   color: #fff;
+}
+.room-status{
+   border: 1px solid gray;
+   width: 80px;
+   border-radius: 20px;
+   padding: 5px 5px;
+   text-align: center;
+   cursor: pointer;
+}
+

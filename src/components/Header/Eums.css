@@ -1,0 +1,17 @@
+.eumsBox{
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   align-items: center;
+   justify-content: center;
+}
+.head-eum{
+   padding-top: 20px;
+   font-size: 20px;
+   color: #fff;
+}
+.head-ward{
+   padding-bottom: 20px;
+   font-size:  40px;
+   color: yellow;
+}
