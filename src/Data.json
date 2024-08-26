@@ -31,8 +31,9 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "G",
+        "fluid": "no",
+        "I-care": 1
     },
     {
         "NO": 2,
@@ -65,8 +66,9 @@
         "callYes": 1,
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "G",
+        "fluid": "no",
+        "I-care": "1"
     },
     {
         "NO": 3,
@@ -99,8 +101,9 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "A",
+        "fluid": "Yes",
+        "I-care": 1
     },
     {
         "NO": 4,
@@ -133,8 +136,9 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "Yes"
+        "fluid_status": "A",
+        "fluid": "Yes",
+        "I-care": 1
     },
     {
         "NO": 5,
@@ -167,8 +171,9 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "no"
+        "fluid_status": "A",
+        "fluid": "no",
+        "I-care": 1
     },
     {
         "NO": 6,
@@ -201,8 +206,9 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "Yes"
+        "fluid_status": "A",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 7,
@@ -230,13 +236,15 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "no"
+        "fluid_status": "C",
+        "fluid": "no",
+        "I-care": 1
+        
     },
     {
         "NO": 8,
@@ -264,13 +272,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 5,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "Yes"
+        "fluid_status": "C",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 9,
@@ -298,13 +307,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": 10,
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "C",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 10,
@@ -332,13 +342,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 36,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "C",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 11,
@@ -371,8 +382,9 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "A",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 12,
@@ -400,13 +412,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 28,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 13,
@@ -434,13 +447,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "A",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 14,
@@ -468,13 +482,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 15,
@@ -507,8 +522,10 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "no"
+        "fluid_status": "G",
+        "fluid": "no",
+        "I-care": 1
+        
     },
     {
         "NO": 16,
@@ -536,13 +553,15 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
+        
     },
     {
         "NO": 17,
@@ -570,13 +589,15 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 22,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "no"
+        "fluid_status": "A",
+        "fluid": "no",
+        "I-care": 1
+        
     },
     {
         "NO": 18,
@@ -604,13 +625,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "Yes"
+        "fluid_status": "C",
+        "fluid": "Yes",
+        "I-care": 1
     },
     {
         "NO": 19,
@@ -638,13 +660,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "Yes"
+        "fluid_status": "C",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 20,
@@ -677,8 +700,9 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "Yes"
+        "fluid_status": "A",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 21,
@@ -706,13 +730,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 3,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "no"
+        "fluid_status": "C",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 22,
@@ -740,13 +765,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "Yes"
+        "fluid_status": "C",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 23,
@@ -774,13 +800,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "no"
+        "fluid_status": "G",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 24,
@@ -808,13 +835,15 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 12,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "Yes"
+        "fluid_status": "A",
+        "fluid": "Yes",
+        "I-care": 1
+        
     },
     {
         "NO": 25,
@@ -842,13 +871,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 15,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "A",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 26,
@@ -876,13 +906,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": 10,
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "C",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 27,
@@ -910,13 +941,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 40,
         "fluidAlert": 1,
-        "oxygenYes": 1,
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": 1,
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 28,
@@ -944,13 +976,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": 1,
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 29,
@@ -978,13 +1011,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "A",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 30,
@@ -1012,13 +1046,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 43,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "no"
+        "fluid_status": "C",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 31,
@@ -1046,13 +1081,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": 10,
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "A",
+        "fluid": "Yes",
+        "I-care": 1
     },
     {
         "NO": 32,
@@ -1080,13 +1116,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 23,
         "fluidAlert": 10,
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": 10,
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "1",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 33,
@@ -1114,13 +1151,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": 10,
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "1",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 34,
@@ -1148,13 +1186,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 4,
         "fluidAlert": 1,
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "1",
-        "fluid": "Yes"
+        "fluid_status": "C",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 35,
@@ -1182,13 +1221,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "1",
-        "fluid": "no"
+        "fluid_status": "C",
+        "fluid": "no",
+        "I-care": 1
     },
     {
         "NO": 36,
@@ -1216,13 +1256,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 92,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "1",
-        "fluid": "no"
+        "fluid_status": "C",
+        "fluid": "no",
+        "I-care": 1
     },
     {
         "NO": 37,
@@ -1250,13 +1291,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 38,
@@ -1284,13 +1326,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 69,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
       "NO": 39,
@@ -1318,13 +1361,14 @@
       "fluidStartTime": "",
       "fluidEndTime": "",
       "fluidAlert": "",
-      "oxygenYes": "",
+      "oxygenYes": 0,
       "therapyOrder": "",
       "callYes": "",
       "fallDown": "",
       "skinSore": "",
-      "fluid_G" : "1",
-      "fluid": "no"
+      "fluid_status": "C",
+      "fluid": "no",
+      "I-care": 1
   },
     {
         "NO": 40,
@@ -1352,13 +1396,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 87,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 0,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "A",
+        "fluid": "Yes",
+        "I-care": 1
     },
     {
         "NO": 41,
@@ -1386,13 +1431,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "Yes"
+        "fluid_status": "C",
+        "fluid": "Yes",
+        "I-care": 1
     },
     {
         "NO": 42,
@@ -1420,13 +1466,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 12,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "no"
+        "fluid_status": "A",
+        "fluid": "no",
+        "I-care": 1
     },
     {
         "NO": 43,
@@ -1454,13 +1501,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
   {
         "NO": 44,
@@ -1488,13 +1536,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 53,
         "fluidAlert": 20,
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder":20,
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     },
     {
         "NO": 45,
@@ -1522,13 +1571,14 @@
         "fluidStartTime": "",
         "fluidEndTime": "",
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_C" : "3",
-        "fluid": "no"
+        "fluid_status": "C",
+        "fluid": "no",
+        "I-care": 0
     },
     {
         "NO": 46,
@@ -1556,13 +1606,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 28,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "A",
+        "fluid": "Yes",
+        "I-care": 0
     },
   
     {
@@ -1591,13 +1642,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 16,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_G" : "1",
-        "fluid": "Yes"
+        "fluid_status": "C",
+        "fluid": "Yes",
+        "I-care": 0
         
     },
     {
@@ -1626,13 +1678,14 @@
         "fluidStartTime": "12:20",
         "fluidEndTime": 62,
         "fluidAlert": "",
-        "oxygenYes": "",
+        "oxygenYes": 1,
         "therapyOrder": "",
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_A" : "2",
-        "fluid": "Yes"
+        "fluid_status": "G",
+        "fluid": "Yes",
+        "I-care": 0
     }
   ]
   

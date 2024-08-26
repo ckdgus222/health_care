@@ -1,29 +1,49 @@
-import "./Bottom.css"
-import { useNavigate } from "react-router-dom"
-
+import { useContext } from "react";
+import "./Bottom.css";
+import { useNavigate } from "react-router-dom";
+import { Health } from "../../App";
 
 // status 실시간 연동
 
+const Bottom = () => {
+  const nav = useNavigate();
+  const { data } = useContext(Health);
 
-const Bottom = () =>{
-   const nav = useNavigate()
+  const patientTotal = () => {
+    return data.filter((item) => item.positionStatus !== "999a").length;
+  };
+  const patientAway = () => {
+    return data.filter((item) => item.positionStatus === "999a").length;
+  };
+  const totalWard = () => {
+    const roomNumbers = data.filter((item) => item.roomNumber).map((item) => item.roomNumber);
 
- 
-  return(
-   <div className="footerContainer">
+    const uniqueRoomNumber = new Set(roomNumbers);
+
+    return Array.from(uniqueRoomNumber).length;
+  };
+
+  return (
+    <div className="footerContainer">
       <div className="status">
-         <span>병실:{0}</span>
-         <span>병상:{0}</span>
-         <span>환자:{0}</span>
-         <span>자리비움:{0}</span>
+        <span>병실:{totalWard()}</span>
+        <span>병상:{data.length}</span>
+        <span>환자:{patientTotal()}</span>
+        <span>자리비움:{patientAway()}</span>
       </div>
       <div className="management">
-         <div onClick={()=> nav("/")}><span>회진관리</span></div>
-         <div onClick={()=> nav("/Acting")}><span>액팅관리</span></div>
-         <div><span>I-nurse</span></div>
+        <div onClick={() => nav("/")}>
+          <span>회진관리</span>
+        </div>
+        <div onClick={() => nav("/Acting")}>
+          <span>액팅관리</span>
+        </div>
+        <div>
+          <span>I-nurse</span>
+        </div>
       </div>
-   </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Bottom
+export default Bottom;

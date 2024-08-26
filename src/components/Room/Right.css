@@ -1,6 +1,7 @@
 .bedContainer_right{
    width: 150px;
    position: relative;
+   margin-left: 20px;
 }
 .bed{
    background-image: url("./../../../public/images/Back-img/0001.png");

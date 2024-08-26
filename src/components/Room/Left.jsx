@@ -64,7 +64,7 @@ const Left = ({ data, onClick,isModalOpen }) => {
       </div>
       <div className="care_leftBox">
         <div className="care_left">
-          <img src="/images/side-img/fluid_out.gif" alt="" />
+          <img src={`/images/side-img/fluid_${data.fluid_status}.gif`} alt="" />
         </div>
         <div className="care_left_text">
           5%

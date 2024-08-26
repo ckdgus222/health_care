@@ -15,18 +15,12 @@
   flex-direction: column;
   align-items: center;
 }
-.left-column {
+.left_column_acting,
+.right_column_acting{
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 20px;
 }
-.right-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  padding: 20px;
-}
 

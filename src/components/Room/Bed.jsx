@@ -6,7 +6,6 @@ const Bed = () =>{
    return(
       <div className="bedBox">
           <Left/>
-          
       </div>
    )
 }

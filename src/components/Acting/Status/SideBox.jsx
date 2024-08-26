@@ -22,12 +22,12 @@ const SideBox = ({data,selectedRoom}) => {
  
    return(
      <div className="side-box">
-           <div className="left-column">
+           <div className="left_column_acting">
            {leftData.map((item) => (
             <Left key={item.NO} data={item} />
           ))}
            </div>
-           <div className="right-column">
+           <div className="right_column_acting">
            {rightData.map((item) => (
             <Right key={item.NO} data={item} />
           ))}

@@ -4,48 +4,27 @@ import Right from "./Right";
 import Modal from "../Modal/Modal";
 import { Selected } from "./../../App";
 import Select from "./Select";
+import { menuFilter } from "../../util/filter_menu";
 import { useContext, useState, useMemo } from "react";
 
 // Room Number 필터링
 
-const RoomBox = ({ leftData, rightData, data, room,selects }) => {
+const RoomBox = ({ leftData, rightData, data, room, selects }) => {
   const { category } = useContext(Selected);
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState(null);
   const [viewType, setViewType] = useState("");
   const [activePatient, setActivePatient] = useState(null);
 
-
   // return category === "수액" ? leftData.filter((item) => item.fluid === "Yes") : leftData;
   const filterLeft = useMemo(() => {
-    switch(category){
-      case "난간":
-      return leftData.filter((item) => item.barStatus !== "11")
-      case "수액G":
-      return leftData.filter((item) => item.fluid_G)
-      case "수액A":
-      return leftData.filter((item) => item.fluid_A)
-      case "수액C":
-      return leftData.filter((item) => item.fluid_C)
-      default:
-        return leftData;
-    }
+   return menuFilter(leftData,category) || []
   }, [category, leftData]);
-  console.log(filterLeft)
-     
+  
+
+
   const filterRight = useMemo(() => {
-    switch(category){
-      case "난간":
-      return leftData.filter((item) => item.barStatus !== "11")
-      case "수액G":
-      return leftData.filter((item) => item.fluid_G)
-      case "수액A":
-      return leftData.filter((item) => item.fluid_A)
-      case "수액C":
-      return leftData.filter((item) => item.fluid_C)
-      default:
-        return leftData;
-    }
+   return menuFilter(rightData,category) || []
   }, [category, rightData]);
 
   const handleRoomModal = () => {
@@ -69,14 +48,13 @@ const RoomBox = ({ leftData, rightData, data, room,selects }) => {
     setModalOpen(true);
   };
 
-
   return (
     <div className="room">
       <div className="left-column">
         {filterLeft.map((item) => (
           <div key={`left-container-${item.NO}`} className="left-container">
-            {selects ? <Select data={item}/> : null}
-            <Left key={`left-${item.NO}`} data={item} onClick={handlePatientClick} isModalOpen={isModalOpen}/>
+            {selects ? <Select data={item} /> : null}
+            <Left key={`left-${item.NO}`} data={item} onClick={handlePatientClick} isModalOpen={isModalOpen} />
           </div>
         ))}
       </div>
@@ -84,7 +62,7 @@ const RoomBox = ({ leftData, rightData, data, room,selects }) => {
         {filterRight.map((item) => (
           <div key={`right-container-${item.NO}`} className="right-container">
             {selects ? <Select data={item} /> : null}
-            <Right key={`right-${item.NO}`} data={item} onClick={handlePatientClick} isModalOpen={isModalOpen}/>
+            <Right key={`right-${item.NO}`} data={item} onClick={handlePatientClick} isModalOpen={isModalOpen} />
           </div>
         ))}
       </div>

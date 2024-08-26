@@ -36,7 +36,7 @@ const Right = ({ data, onClick, isModalOpen }) => {
       setStateClick((prev) => prev ? null : "active")
     }
   }
-
+ 
 
 
 
@@ -64,7 +64,7 @@ const Right = ({ data, onClick, isModalOpen }) => {
       </div>
       <div className="care_rightBox">
         <div className="care_right">
-          <img src="/images/side-img/fluid_out.gif" alt="" />
+          <img src={`/images/side-img/fluid_${data.fluid_status}.gif`} alt="" />
         </div>
         <div className="care_left_text">
           5%
