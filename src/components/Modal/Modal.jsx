@@ -7,16 +7,10 @@ import { bedStatus } from "../../util/bedStatus";
 
 const Modal = ({ data, viewType, onClose }) => {
   const [any, setAny] = useState("");
-  const [isRoomModalOpen , setRoomModalOpen] = useState(false)
- 
-  
 
   const handleClose = () => {
     onClose();
-    setRoomModalOpen(false); // Reset the room modal state when closing
   };
-
-
 
   useEffect(() => {
     let time = setTimeout(() => {
@@ -29,9 +23,7 @@ const Modal = ({ data, viewType, onClose }) => {
     };
   }, []);
 
-
   if (!data) return null;
-    
 
   return (
     <>
@@ -41,12 +33,7 @@ const Modal = ({ data, viewType, onClose }) => {
           <h2>{viewType === "room" ? `Room ${data.left[0].roomNumber}` : `Patient ${data.NO}`}</h2>
           {viewType === "room" ? (
             <>
-              <RoomBox width={"400px"} 
-                text={"하이"}
-                leftData={data.left} 
-                rightData={data.right} 
-                isRoomModalOpen={isRoomModalOpen} 
-                setRoomModalOpen={setRoomModalOpen}/>
+              <RoomBox width={"400px"} text={"하이"} leftData={data.left} rightData={data.right} />
             </>
           ) : (
             <div className="modal_patient">

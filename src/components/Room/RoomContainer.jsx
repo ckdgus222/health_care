@@ -6,6 +6,7 @@ import TabContent from "../Tabs/TabContent";
 
 const RoomContainer = ({ selects,menuTab, isTab, setTab }) => {
   const { data } = useContext(Health);
+  const [isModalOpen, setModalOpen] = useState(false)
 
   const chunkedData = [];
   for (let i = 0; i < data.length; i += 6) {
@@ -24,7 +25,7 @@ const RoomContainer = ({ selects,menuTab, isTab, setTab }) => {
         {chunkedData.map((group, index) => {
           const leftData = group.filter((item) => item.NO % 2 === 0);
           const rightData = group.filter((item) => item.NO % 2 !== 0);
-          return <RoomBox key={index} selects={selects} leftData={leftData} rightData={rightData} data={data} room={index} />;
+          return <RoomBox key={index} selects={selects} leftData={leftData} rightData={rightData} data={data} room={index} isModalOpen={isModalOpen} setModalOpen={setModalOpen}/>;
         })}
       </div>
     </div>

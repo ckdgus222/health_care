@@ -4,6 +4,7 @@
    flex: 1;
    align-items: center;
    justify-content: center;
+   cursor: pointer;
 }
 .head-eum{
    padding-top: 20px;
