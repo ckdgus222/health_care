@@ -9,52 +9,47 @@ import { useContext, useState, useMemo } from "react";
 
 // Room Number 필터링
 
-const RoomBox = ({ leftData, rightData, data, room, selects }) => {
+const RoomBox = ({ leftData, rightData, data, room, selects, width, isRoomModalOpen, setRoomModalOpen }) => {
   const { category } = useContext(Selected);
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState(null);
   const [viewType, setViewType] = useState("");
-  const [activePatient, setActivePatient] = useState(null);
+
+
 
   // return category === "수액" ? leftData.filter((item) => item.fluid === "Yes") : leftData;
   const filterLeft = useMemo(() => {
-   return menuFilter(leftData,category) || []
+    return menuFilter(leftData, category) || [];
   }, [category, leftData]);
-  
-
 
   const filterRight = useMemo(() => {
-   return menuFilter(rightData,category) || []
+    return menuFilter(rightData, category) || [];
   }, [category, rightData]);
 
   const handleRoomModal = () => {
     setViewType("room");
     setModalData({ left: filterLeft, right: filterRight });
+    // setRoomModalOpen(true);
     setModalOpen(true);
   };
-  // const handleSingleClick = (item) => {
-  //   setActivePatient((prevState) => (prevState && prevState.NO === item.NO ? null : item));
-  // };
-
-  // const handleDoubleClick = (item) => {
-  //   setViewType("patient");
-  //   setModalData(item);
-  //   setModalOpen(true);
-  // };
+  
 
   const handlePatientClick = (data, order) => {
-    setViewType("patient"); // 개별환자
-    setModalData({ ...data, order });
-    setModalOpen(true);
+    if (!isRoomModalOpen) {
+      // Room 모달이 열려 있지 않을때 실행
+      setViewType("patient"); // 개별환자
+      setModalData({ ...data, order });
+      setModalOpen(true);
+    }
   };
 
   return (
-    <div className="room">
+    <div className="room" style={{ width: width }}>
       <div className="left-column">
         {filterLeft.map((item) => (
           <div key={`left-container-${item.NO}`} className="left-container">
             {selects ? <Select data={item} /> : null}
-            <Left key={`left-${item.NO}`} data={item} onClick={handlePatientClick} isModalOpen={isModalOpen} />
+            <Left key={`left-${item.NO}`} data={item} onClick={() => handlePatientClick(item)} isModalOpen={isModalOpen} />
           </div>
         ))}
       </div>
@@ -62,12 +57,12 @@ const RoomBox = ({ leftData, rightData, data, room, selects }) => {
         {filterRight.map((item) => (
           <div key={`right-container-${item.NO}`} className="right-container">
             {selects ? <Select margin={"marginReft"} data={item} /> : null}
-            <Right key={`right-${item.NO}`} data={item} onClick={handlePatientClick} isModalOpen={isModalOpen} />
+            <Right key={`right-${item.NO}`} data={item} onClick={() => handlePatientClick(item)} isModalOpen={isModalOpen} />
           </div>
         ))}
       </div>
       <div className="room_number" onClick={handleRoomModal}>
-        Room 511{room + 1}
+        Room {leftData[0].roomNumber}
       </div>
       {isModalOpen && (
         <Modal
@@ -75,6 +70,7 @@ const RoomBox = ({ leftData, rightData, data, room, selects }) => {
           viewType={viewType}
           onClose={() => {
             setModalOpen(false);
+            // setRoomModalOpen(false);
           }}
         />
       )}

@@ -1,5 +1,5 @@
 .select_box{
-   width: 150px;
+   width: 170px;
    height: 70px;
    position: absolute;
    padding: 10px;
@@ -7,7 +7,7 @@
    background-color: rgba(0, 0, 0, 0.6);
 }
 .marginReft{
-   margin-left: 15px;
+   margin-left: 23px;
 }
 
 /*

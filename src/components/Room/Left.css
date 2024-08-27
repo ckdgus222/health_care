@@ -15,11 +15,9 @@
 .care_left > img{
    width: 20px;
 }
-.bedContainer:hover .left_hover{
-   display: block;
-}
+
 .left_hover{
-   display: none;
+   visibility: hidden;
    position: absolute;
    top: 3px;
    left: 156px;
@@ -30,7 +28,17 @@
    background-color: rgba(0, 0, 0, 0.8);
    z-index: 2;
    color: black;
+   opacity: 0;
+   transform: translateY(-10px);
+   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
 }
+
+.bedContainer:hover .left_hover{
+   visibility: visible;
+   opacity: 1;
+   transform: translate(0);
+}
+
 .left_hover > p,
 .left_hover > p > span{
    color: #fff;

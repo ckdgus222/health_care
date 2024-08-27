@@ -35,7 +35,7 @@ const Left = ({ data, onClick,isModalOpen }) => {
 
 
   return (
-    <div className="bedContainer"  onDoubleClick={() =>  onClick(data, order)}>
+    <div className="bedContainer"  onClick={() =>  onClick(data, order)}>
       <div className="bed" style={{ backgroundImage: `url(/images/Back-img/bed/${bedStatus(data.barStatus)})` }}>
         <img style={{ width: "100%" }} src={`/images/Image/${data.positionStatus}.gif`} />
       </div>
@@ -74,7 +74,7 @@ const Left = ({ data, onClick,isModalOpen }) => {
           {data.breathRate}
         </div>
       </div>
-      <div className={`left_hover`}>
+      <div className="left_hover">
         <p>
           <span>{data.roomNumber}</span> {data.patName}
         </p>

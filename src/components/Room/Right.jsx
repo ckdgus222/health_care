@@ -11,7 +11,7 @@ const Right = ({ data, onClick, isModalOpen }) => {
     therapyOrder10: "",
     therapyOrder20: "",
   });
-  const [stateClick, setStateClick] = useState("");
+ 
 
   useEffect(() => {
     const updatedOrder = { ...order }; // 기존 상태 복사
@@ -29,19 +29,13 @@ const Right = ({ data, onClick, isModalOpen }) => {
     setOrder(updatedOrder); // 상태 한 번에 업데이트
   }, [data]);
 
-  const hoverText =()=>{
-    if(isModalOpen === true){
-      setStateClick(null)
-    }else{
-      setStateClick((prev) => prev ? null : "active")
-    }
-  }
+ 
  
 
 
 
   return (
-    <div className="bedContainer_right" onClick={()=> hoverText()} onDoubleClick={() =>  onClick(data, order)}>
+    <div className="bedContainer_right"  onClick={() =>  onClick(data, order)}>
       <div style={{ position: "absolute", top: "0", right: "150px" }}>
         {order.oxygenYes && (
           <div style={{ width: "25px", height: "25px" }}>
@@ -80,7 +74,7 @@ const Right = ({ data, onClick, isModalOpen }) => {
           {data.breathRate}
         </div>
       </div>
-      <div className={`right_hover`}>
+      <div className="right_hover">
         <p>
           <span>{data.roomNumber}</span> {data.patName}
         </p>

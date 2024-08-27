@@ -31,7 +31,7 @@
         "callYes": "",
         "fallDown": "",
         "skinSore": "",
-        "fluid_status": "G",
+        "fluid_status": "A",
         "fluid": "no",
         "I-care": 1
     },
@@ -1687,5 +1687,6 @@
         "fluid": "Yes",
         "I-care": 0
     }
+    
   ]
   

@@ -21,11 +21,9 @@
 .care_right > img{
    width: 20px;
 }
-.bedContainer_right:hover .right_hover{
-   display: block;
-}
+
 .right_hover{
-   display: none;
+   visibility: hidden;
    position: absolute;
    top: 3px;
    right: 156px;
@@ -36,7 +34,18 @@
    background-color: rgba(0, 0, 0, 0.8);
    z-index: 2;
    color: black;
+   opacity: 0;
+   transform: translateY(-10px);
+   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+
+.bedContainer_right:hover .right_hover{
+   visibility: visible;
+   opacity: 1;
+   transform: translate(0);
+}
+
+
 .right_hover > p,
 .right_hover > p > span{
    color: #fff;
