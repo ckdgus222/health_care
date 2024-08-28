@@ -1,11 +1,11 @@
-.room-box{
+.roomBox{
    width: 100%;
    display: flex;
    flex-wrap: wrap;
    gap: 3px;
    color: #fff;
 }
-.room-status{
+.roomStatus{
    border: 1px solid gray;
    width: 80px;
    border-radius: 20px;

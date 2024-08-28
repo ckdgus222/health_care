@@ -1,8 +1,8 @@
-import "./Header.css"
+import styles from "./Header.module.css"
 
 const Header = ({children}) =>{
   return(
-    <div className="nav_head">
+    <div className={styles.navHead}>
       {children}
     </div>
   )   

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Left.css";
+import styles from "./Left.module.css";
 import { bedStatus } from "../../util/bedStatus";
 
 // 침대 상태 4가지
@@ -35,8 +35,8 @@ const Left = ({ data, onClick,isModalOpen }) => {
 
 
   return (
-    <div className="bedContainer"  onClick={() =>  onClick(data, order)}>
-      <div className="bed" style={{ backgroundImage: `url(/images/Back-img/bed/${bedStatus(data.barStatus)})` }}>
+    <div className={styles.bedContainer} onClick={() =>  onClick(data, order)}>
+      <div className={styles.bed} style={{ backgroundImage: `url(/images/Back-img/bed/${bedStatus(data.barStatus)})` }}>
         <img style={{ width: "100%" }} src={`/images/Image/${data.positionStatus}.gif`} />
       </div>
       <div style={{ position: "absolute", top: "0", left: "150px" }}>
@@ -56,25 +56,25 @@ const Left = ({ data, onClick,isModalOpen }) => {
           </div>
         )}
       </div>
-      <div className="care_leftBox">
-        <div className="care_left">
+      <div className={styles.careLeftBox}>
+        <div className={styles.careLeft}>
           <img src={`/images/side-img/fluid_${data.fluid_status}.gif`} alt="" />
         </div>
-        <div className={`care_left_text left_${data.fluid_status}`}>
+        <div className={`${styles.careLeftText} ${styles[`left_${data.fluid_status}`]}`}>
           5%
           <br />
           3M
         </div>
-        <div className="care_left">
+        <div className={styles.careLeft}>
           <img src="/images/side-img/heart_alert.gif" alt="" />
         </div>
-        <div className="care_left_text">
+        <div className={styles.careLeftText}>
           {data.ecgRate}
           <br />
           {data.breathRate}
         </div>
       </div>
-      <div className="left_hover">
+      <div className={styles.leftHover}>
         <p>
           <span>{data.roomNumber}</span> {data.patName}
         </p>

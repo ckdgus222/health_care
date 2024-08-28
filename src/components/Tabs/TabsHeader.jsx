@@ -1,4 +1,4 @@
-import "./TabsHeader.css"
+import styles from "./TabsHeader.module.css"
 import Button from "../Button"
 
 const TabsHeader = ({menuTab, setTab}) =>{
@@ -8,12 +8,12 @@ const TabsHeader = ({menuTab, setTab}) =>{
   }
 
    return(
-     <div className="tab_header">
-        <div className="tab_header_text">
+     <div className={styles.tabHeader}>
+        <div className={styles.tabHeaderText}>
            <span>{menuTab}</span>
            <span>  옵션</span>
         </div>
-        <div className="tab_header_close">
+        <div className={styles.tabHeaderClose}>
          <Button text={"X"} onClick={closeTab} />
         </div>
      </div>

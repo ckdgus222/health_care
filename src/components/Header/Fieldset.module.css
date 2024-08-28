@@ -22,7 +22,7 @@
    flex: 2;
 }
 
-.fieldset{
+.fieldSet{
    display: flex;
    align-items: center;
    position: relative;

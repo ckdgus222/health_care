@@ -1,4 +1,4 @@
-.tab_container {
+.tabContainer {
   background-color: #fff;
   position: absolute;
   border-radius: 20px;
@@ -9,8 +9,11 @@
   left: 60%;
   transform: translate(-50%, -50%);
 }
-.tab_content{
+.tabContent{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.tabBottom{
+  
 }

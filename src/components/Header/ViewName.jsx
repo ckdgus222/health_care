@@ -1,4 +1,4 @@
-import "./ViewName.css"
+import styles from "./ViewName.module.css"
 
 
 
@@ -6,11 +6,11 @@ import "./ViewName.css"
 const ViewName = ({setSelects}) =>{
 
   return(
-    <div className="viewBox">
-      <h2 className="viewText">이름보기</h2>
-      <label className="switch">
+    <div className={styles.viewBox}>
+      <h2 className={styles.viewText}>이름보기</h2>
+      <label className={styles.switch}>
          <input type="checkbox" onClick={()=> setSelects((prev) => !prev)}/>
-         <span className="slider round"></span>
+         <span className={`${styles.slider} ${styles.round}`}></span>
       </label>
     </div>
   )

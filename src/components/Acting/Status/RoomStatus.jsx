@@ -1,10 +1,10 @@
-import "./RoomStatus.css";
+import styles from "./RoomStatus.module.css";
 import { useContext } from "react";
 import { Health } from "./../../../App";
 
 // room number 확장 생각
 const RoomStatus = ({data, setSelectedRoom}) => {
-  console.log(data); 
+
    
   const seen = new Set();
   const filterRoom = data.filter(item =>{
@@ -16,10 +16,10 @@ const RoomStatus = ({data, setSelectedRoom}) => {
    
 
   return (
-    <div className="room-box">
-      <div className="room-status">I-care</div>
+    <div className={styles.roomBox}>
+      <div className={styles.roomStatus}>I-care</div>
       {filterRoom.map((item) =>(
-         <div className="room-status" key={item.NO} onClick={()=> setSelectedRoom(item.roomNumber)}>
+         <div className={styles.RoomStatus} key={item.NO} onClick={()=> setSelectedRoom(item.roomNumber)}>
             {item.roomNumber}
          </div>
       ))}

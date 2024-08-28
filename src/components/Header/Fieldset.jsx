@@ -1,5 +1,5 @@
 import { useState,useEffect,use } from "react"
-import "./Fieldset.css"
+import styles from "./Fieldset.module.css"
 import { useContext } from "react"
 import { Selected } from "../../App"
 
@@ -23,12 +23,12 @@ const Fieldset = () =>{
 
   
   return(
-   <div className="fieldsetBox">
-      <fieldset className="fieldset">
+   <div className={styles.fieldsetBox}>
+      <fieldset className={styles.fieldSet}>
         {fieldSelect.map((item, i) => (
-          <label className="labelStyle" key={i}>
-            <input type="radio" value={item} name="contact" className="radioInput" checked={selected === item} onChange={()=> handleOptionChange(item)}/>
-            <span className="customRadio"></span>
+          <label className={styles.labelStyle} key={i}>
+            <input type="radio" value={item} name="contact" className={styles.radioInput} checked={selected === item} onChange={()=> handleOptionChange(item)}/>
+            <span className={styles.customRadio}></span>
             <p style={{ marginTop: "0" ,color:"#FFF"}}>{item}</p>
           </label>
         ))}

@@ -1,4 +1,4 @@
-import "./Button.css"
+import "./Button.module.css"
 
 const Button = ({text,onClick}) =>{
  return(

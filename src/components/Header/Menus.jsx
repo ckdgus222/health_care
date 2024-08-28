@@ -1,4 +1,4 @@
-import "./Menus.css";
+import styles from "./Menus.module.css";
 import { menuList } from "../../util/menuConst";
 
 //menu list
@@ -8,10 +8,10 @@ const Menus = ({ setMenuTab,setTab,menuTab }) => {
   
 
   return (
-    <div className="menuBox">
-      <ul className="menuList">
+    <div className={styles.menuBox}>
+      <ul className={styles.menuList}>
         {menuList.map((item, i)=> (
-         <li className="list" key={i} onClick={() => { setMenuTab(item)
+         <li className={styles.list} key={i} onClick={() => { setMenuTab(item)
              setTab(prev =>{
              if(menuTab === item && prev){
                return false

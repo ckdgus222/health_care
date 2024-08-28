@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Right.css";
+import styles from "./Right.module.css";
 import { useEffect } from "react";
 import { bedStatus } from "../../util/bedStatus";
 
@@ -35,7 +35,7 @@ const Right = ({ data, onClick, isModalOpen }) => {
 
 
   return (
-    <div className="bedContainer_right"  onClick={() =>  onClick(data, order)}>
+    <div className={styles.bedContainerRight}  onClick={() =>  onClick(data, order)}>
       <div style={{ position: "absolute", top: "0", right: "150px" }}>
         {order.oxygenYes && (
           <div style={{ width: "25px", height: "25px" }}>
@@ -53,28 +53,28 @@ const Right = ({ data, onClick, isModalOpen }) => {
           </div>
         )}
       </div>
-      <div className="bed" style={{ backgroundImage: `url(/images/Back-img/bed/${bedStatus(data.barStatus)})` }}>
-        <img className="right_img" style={{ width: "100%" }} src={`/images/Image/${data.positionStatus}.gif`} />
+      <div className={styles.bed} style={{ backgroundImage: `url(/images/Back-img/bed/${bedStatus(data.barStatus)})` }}>
+        <img className={styles.rightImg} style={{ width: "100%" }} src={`/images/Image/${data.positionStatus}.gif`} />
       </div>
-      <div className="care_rightBox">
-        <div className="care_right">
+      <div className={styles.careRightBox}>
+        <div className={styles.careRight}>
           <img src={`/images/side-img/fluid_${data.fluid_status}.gif`} alt="" />
         </div>
-        <div className={`care_right_text right_${data.fluid_status}`}>
+        <div className={`${styles.careRightText} ${styles[`right_${data.fluid_status}`]}`}>
           5%
           <br />
           3M
         </div>
-        <div className="care_right">
+        <div className={styles.careRight}>
           <img src="/images/side-img/heart_alert.gif" alt="" />
         </div>
-        <div className="care_right_text">
+        <div className={styles.careRightText}>
           {data.ecgRate}
           <br />
           {data.breathRate}
         </div>
       </div>
-      <div className="right_hover">
+      <div className={styles.rightHover}>
         <p>
           <span>{data.roomNumber}</span> {data.patName}
         </p>

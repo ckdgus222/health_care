@@ -3,20 +3,19 @@
    position: relative;
 }
 .bed{
-   background-image: url("./../../../public/images/Back-img/0001.png");
    background-repeat: no-repeat;
    background-size: cover;
 }
-.care_leftBox{
+.careLeftBox{
   display: flex;
   gap: 15px;
   margin-top: 10px;
 }
-.care_left > img{
+.careLeft > img{
    width: 20px;
 }
 
-.left_hover{
+.leftHover{
    visibility: hidden;
    position: absolute;
    top: 3px;
@@ -33,14 +32,19 @@
    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
 }
 
-.bedContainer:hover .left_hover{
+.bedContainer:hover .leftHover{
    visibility: visible;
    opacity: 1;
    transform: translate(0);
 }
+.careRightBox {
+   display: flex;
+   gap: 15px;
+   margin-top: 10px
+}
 
-.left_hover > p,
-.left_hover > p > span{
+.leftHover > p,
+.leftHover > p > span{
    color: #fff;
 }
 .active{

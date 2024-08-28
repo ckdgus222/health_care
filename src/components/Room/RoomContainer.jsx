@@ -1,4 +1,4 @@
-import "./RoomContainer.css";
+import styles from "./RoomContainer.module.css";
 import RoomBox from "./RoomBox";
 import { useContext, useState } from "react";
 import { Health } from "./../../App";
@@ -15,13 +15,13 @@ const RoomContainer = ({ selects,menuTab, isTab, setTab }) => {
   
  
   return (
-    <div className="container" onClick={()=> setTab(false)}>
+    <div className={styles.container} onClick={()=> setTab(false)}>
       {isTab && (
         <div onClick={(e) => e.stopPropagation()}>
           <TabContent menuTab={menuTab} setTab={setTab} />
         </div>
       )}
-      <div className="roomContainer">
+      <div className={styles.roomContainer}>
         {chunkedData.map((group, index) => {
           const leftData = group.filter((item) => item.NO % 2 === 0);
           const rightData = group.filter((item) => item.NO % 2 !== 0);

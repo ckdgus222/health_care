@@ -1,7 +1,7 @@
 import HeaderContainer from "../components/Header/HeaderContainer"
 import RoomContainer from "../components/Room/RoomContainer"
 import Bottom from "../components/Bottom/Bottom"
-import "./RoomMain.css"
+import styles from "./RoomMain.module.css"
 import { useState } from "react"
 
 const RoomMain = () =>{
@@ -14,7 +14,7 @@ const RoomMain = () =>{
   
 
   return (
-    <div className="RoomContainer">
+    <div className={styles.roomContainer}>
       <HeaderContainer setSelects={setSelects} menuTab={menuTab} setTab={setTab} setMenuTab={setMenuTab}/>
       <RoomContainer  selects={selects} menuTab={menuTab} isTab={isTab} setTab={setTab}/>
       <Bottom/>

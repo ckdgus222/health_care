@@ -1,4 +1,4 @@
-import "./SideBox.css"
+import styles from "./SideBox.module.css"
 import Right from "../../Room/Right"
 import Left from "../../Room/Left"
 import { Health } from "../../../App"
@@ -15,19 +15,19 @@ const SideBox = ({data,selectedRoom}) => {
    // }
    // console.log(Array.from(new Set(data.map(item => item.roomNumber))))
    const filterData = selectedRoom ? data.filter(item => item.roomNumber === selectedRoom) : [];
-   console.log(filterData)
+
    
    const leftData = filterData.slice(0,3)
    const rightData = filterData.slice(3,6)
  
    return(
-     <div className="side-box">
-           <div className="left_column_acting">
+     <div className={styles.sideBox}>
+           <div className={styles.leftColumnActing}>
            {leftData.map((item) => (
             <Left key={item.NO} data={item} />
           ))}
            </div>
-           <div className="right_column_acting">
+           <div className={styles.rightColumnActing}>
            {rightData.map((item) => (
             <Right key={item.NO} data={item} />
           ))}

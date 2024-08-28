@@ -1,5 +1,6 @@
 import RoomMain from "./pages/RoomMain";
 import Acting from "./pages/Acting";
+import Eum from "./pages/Eum";
 import "./App.css";
 import { createContext } from "react";
 import { Routes, Route } from "react-router-dom";
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<RoomMain />} />
           <Route path="/acting" element={<Acting />} />
+          <Route path="/eum" element={<Eum/>}/>
         </Routes>
       </Selected.Provider>
     </Health.Provider>

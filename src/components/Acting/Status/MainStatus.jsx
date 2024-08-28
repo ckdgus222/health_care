@@ -1,4 +1,4 @@
-import "./MainStatus.css"
+import styles from "./MainStatus.module.css"
 import RoomStatus from "./RoomStatus"
 import Left from "../../Room/Left"
 import Right from "../../Room/Right"
@@ -16,7 +16,7 @@ const MainStatus = ()=> {
    
 
    return(
-      <div className="main-status">
+      <div className={styles.mainStatus}>
         <RoomStatus data={data} setSelectedRoom={setSelectedRoom}/>
         <SideBox data={data} selectedRoom={selectedRoom}/>
       </div>

@@ -1,4 +1,4 @@
-.bedContainer_right{
+.bedContainerRight{
    width: 150px;
    position: relative;
    margin-left: 20px;
@@ -9,20 +9,20 @@
    background-size: cover;
 
 }
-.bed .right_img{
+.bed .rightImg{
    transform: scaleX(-1);
 }
 
-.care_rightBox{
+.careRightBox{
   display: flex;
   gap: 15px;
   margin-top: 10px;
 }
-.care_right > img{
+.careRight > img{
    width: 20px;
 }
 
-.right_hover{
+.rightHover{
    visibility: hidden;
    position: absolute;
    top: 3px;
@@ -39,15 +39,20 @@
    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.bedContainer_right:hover .right_hover{
+.bedContainerRight:hover .rightHover{
    visibility: visible;
    opacity: 1;
    transform: translate(0);
 }
+.careRightBox {
+   display: flex;
+   gap: 15px;
+   margin-top: 10px
+}
 
 
-.right_hover > p,
-.right_hover > p > span{
+.rightHover > p,
+.rightHover > p > span{
    color: #fff;
 }
 

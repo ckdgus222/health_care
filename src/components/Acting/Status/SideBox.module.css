@@ -1,4 +1,4 @@
-.side-box {
+.sideBox {
   border: 1px solid #2f2e2e;
   display: grid;
   grid-template-columns: 1fr 1fr; /* 두 열로 나누기 */
@@ -10,13 +10,13 @@
   position: relative;
   color: #fff;
 }
-.gird-box {
+/* .gird-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.left_column_acting,
-.right_column_acting{
+} */
+.leftColumnActing,
+.rightColumnActing{
   display: flex;
   flex-direction: column;
   align-items: center;

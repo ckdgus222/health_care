@@ -10,7 +10,7 @@
 .userLogin{
    font-size: 12px;
 }
-.icon-logout{
+.iconLogout{
    width: 15px;
    text-align: center;
    margin-right: 0px;
@@ -26,7 +26,9 @@
 .nav > span > img{
    width: 25px 
 }
+.nav span:nth-child(2){
+   cursor: pointer;
+}
 .nav span:nth-child(3){
    cursor: pointer;
 }
-

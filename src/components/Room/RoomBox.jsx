@@ -1,4 +1,4 @@
-import "./RoomBox.css";
+import styles from "./RoomBox.module.css";
 import Left from "./Left";
 import Right from "./Right";
 import Modal from "../Modal/Modal";
@@ -9,6 +9,7 @@ import { useContext, useState, useMemo } from "react";
 
 
 // Room Number 필터링
+
 
 const RoomBox = ({ leftData, rightData, data, room, selects, width ,isModalOpen,setModalOpen}) => {
   const { category } = useContext(Selected);
@@ -49,24 +50,24 @@ const RoomBox = ({ leftData, rightData, data, room, selects, width ,isModalOpen,
   };
 
   return (
-    <div className="room" style={{ width: width }}>
-      <div className="left-column">
+    <div className={styles.room} style={{ width: width }}>
+      <div className={styles.leftColumn}>
         {filterLeft.map((item) => (
-          <div key={`left-container-${item.NO}`} className="left-container">
+          <div key={`left-container-${item.NO}`} className={styles.leftContainer}>
             {selects ? <Select data={item} /> : null}
             <Left key={`left-${item.NO}`} data={item} onClick={() => handlePatientClick(item)} isModalOpen={isModalOpen} />
           </div>
         ))}
       </div>
-      <div className="right-column">
+      <div className={styles.rightColumn}>
         {filterRight.map((item) => (
-          <div key={`right-container-${item.NO}`} className="right-container">
+          <div key={`right-container-${item.NO}`} className={styles.rightContainer}>
             {selects ? <Select margin={"marginReft"} data={item} /> : null}
             <Right key={`right-${item.NO}`} data={item} onClick={() => handlePatientClick(item)} isModalOpen={isModalOpen} />
           </div>
         ))}
       </div>
-      <div className="room_number" onClick={handleRoomModal}>
+      <div className={styles.roomNumber} onClick={handleRoomModal}>
         Room {leftData[0].roomNumber}
       </div>
       {isModalOpen && (

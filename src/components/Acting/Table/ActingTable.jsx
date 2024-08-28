@@ -1,18 +1,18 @@
-import "./ActingTable.css"
+import styles from "./ActingTable.module.css"
 
 
 const ActingTable = () =>{
 
    return (
-      <div className="table-layout">
-      <div className="header">
-        <div className="tab">병실관리</div>
-        <div className="tab">수액관리</div>
-        <div className="tab">예약관리</div>
-        <div className="tab">처치관리</div>
-        <div className="tab">욕창/낙상관리</div>
+      <div className={styles.tableLayout}>
+      <div className={styles.header}>
+        <div className={styles.tab}>병실관리</div>
+        <div className={styles.tab}>수액관리</div>
+        <div className={styles.tab}>예약관리</div>
+        <div className={styles.tab}>처치관리</div>
+        <div className={styles.tab}>욕창/낙상관리</div>
       </div>
-      <div className="table-section">
+      <div className={styles.tableSection}>
         <table>
           <thead>
             <tr>
@@ -41,9 +41,9 @@ const ActingTable = () =>{
         </table>
       </div>
 
-      <div className="table-title">병동전체</div>
+      <div className={styles.tableTitle}>병동전체</div>
 
-      <div className="table-section">
+      <div className={styles.tableSection}>
         <table>
           <thead>
             <tr>

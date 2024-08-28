@@ -1,4 +1,4 @@
-import "./Eums.css"
+import styles from "./Eums.module.css"
 import { useNavigate } from "react-router-dom"
 
 const Eums = () =>{
@@ -6,9 +6,9 @@ const Eums = () =>{
 
 
    return(
-      <div className="eumsBox" onClick={()=> nav("/")}>
-         <span className="head-eum">EUM:care</span> {/** 변경 가능 */}
-         <span className="head-ward">0511</span> {/** 변경 가능 */}
+      <div className={styles.eumsBox} onClick={()=> nav("/")}>
+         <span className={styles.headEum}>EUM:care</span> {/** 변경 가능 */}
+         <span className={styles.headWard}>0511</span> {/** 변경 가능 */}
       </div>
    )
 }

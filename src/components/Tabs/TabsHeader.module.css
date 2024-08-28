@@ -1,4 +1,4 @@
-.tab_header{
+.tabHeader{
    background-color: gray;
    display: flex;
    height: 30px;
@@ -6,7 +6,7 @@
    padding: 10px 10px;
    border-radius: 5px;
 }
-.tab_header_close{
+.tabHeaderClose{
    position: relative;
    top: -5px;
 }

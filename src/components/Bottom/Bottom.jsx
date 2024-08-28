@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "./Bottom.css";
+import styles from "./Bottom.module.css";
 import { useNavigate } from "react-router-dom";
 import { Health } from "../../App";
 
@@ -24,14 +24,14 @@ const Bottom = () => {
   };
 
   return (
-    <div className="footerContainer">
-      <div className="status">
+    <div className={styles.footerContainer}>
+      <div className={styles.status}>
         <span>병실:{totalWard()}</span>
         <span>병상:{data.length}</span>
         <span>환자:{patientTotal()}</span>
         <span>자리비움:{patientAway()}</span>
       </div>
-      <div className="management">
+      <div className={styles.management}>
         <div onClick={() => nav("/")}>
           <span>회진관리</span>
         </div>

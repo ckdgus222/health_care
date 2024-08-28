@@ -1,4 +1,4 @@
-import "./Acting.css"
+import "./Acting.module.css"
 import HeaderContainer from "../components/Header/HeaderContainer"
 import PatientStatus from "../components/Acting/PatientStatus"
 
