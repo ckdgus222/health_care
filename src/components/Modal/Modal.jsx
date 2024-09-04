@@ -23,6 +23,7 @@ const Modal = ({ data, viewType, onClose }) => {
       setAny("");
     };
   }, []);
+  
 
   if (!data) return null;
 

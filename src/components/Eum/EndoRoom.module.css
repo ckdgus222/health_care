@@ -1,42 +1,96 @@
+/* 
+@keyframes flash {
+  0% { background-color: rgb(153, 45, 45); }
+  50%{ background-color: rgb(187, 47, 47);}
+  100% { background-color: rgb(166, 0, 0); }
+} */
+
+@keyframes dangerFlash {
+  0% {
+    background-color: rgba(255, 0, 0, 0.2); /* Slight red tint */
+    border-color: red;
+  }
+  50% {
+    background-color: transparent; /* Back to normal */
+    border-color: transparent;
+  }
+  100% {
+    background-color: rgba(255, 0, 0, 0.2); /* Slight red tint again */
+    border-color: red;
+  }
+}
+
+
+
 .endoContainer {
   flex: 0.8;
   height: 100%;
   background-color: #090909;
   border: 1px solid #000;
+
 }
+
 .outerGrid {
   display: grid;
-  border: 1px solid #b7b5b5;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 5px;
-  padding: 5px;
-  height: 100vh;
+  gap: 0px;
+  height: 92vh;
   overflow: scroll;
+}
+.recoveryTime{
+  width: 100%;
+  height: 100%;
 }
 .innerGrid {
   display: grid;
+  width: 80%;
+  height: 100%;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 6px;
-  padding: 5px;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  border-radius: 20px;
 }
+.innerGridCondition{
+  animation: flash 1s infinite;
+}
+.emergencyPatient {
+  animation: dangerFlash 1s infinite; /* Animation lasts 1s and repeats infinitely */
+  border: 2px solid red; /* Red border to emphasize the emergency */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
 .innerGridImg {
   grid-area: 1 / 1 / 4 / -1;
   width: 100%;
-  background-size: 100% 100%;
+  height: 100%; /* 이미지가 그리드 영역을 채우도록 설정 */
+  background-size: contain; /* 이미지 크기를 그리드 영역에 맞게 조정 */
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .innerGridImg > img{
    padding-top: 10px;
    width: 100%;
    text-align: center;
 }
-.innerGridBar{
-   grid-area: 4 / 1 / 5 / 4;
-   background-size: cover;
+.innerGridBar {
+  grid-area: 4 / 1 / 5 / 4;
+  border: 2px solid green;
+  width: 100%;
+  height: 100%; /* 그리드 영역을 채우도록 설정 */
+  background-size: cover;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+ 
 }
+
 .innerGridText{
    text-align: center;
    color: white;

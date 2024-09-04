@@ -33,7 +33,9 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "no",
-        "I-care": 1
+        "I-care": 1,
+        "recovery": 120,
+        "condition": "주사"
     },
     {
         "NO": 2,
@@ -68,7 +70,8 @@
         "skinSore": "",
         "fluid_status": "G",
         "fluid": "no",
-        "I-care": "1"
+        "I-care": "1",
+        "recovery": 40
     },
     {
         "NO": 3,
@@ -103,7 +106,8 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "Yes",
-        "I-care": 1
+        "I-care": 1,
+        "recovery": 60
     },
     {
         "NO": 4,
@@ -138,7 +142,8 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "Yes",
-        "I-care": 1
+        "I-care": 1,
+        "recovery": 30
     },
     {
         "NO": 5,
@@ -173,7 +178,8 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "no",
-        "I-care": 1
+        "I-care": 1,
+        "recovery": 80
     },
     {
         "NO": 6,
@@ -208,7 +214,8 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "Yes",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 90
     },
     {
         "NO": 7,
@@ -243,7 +250,8 @@
         "skinSore": "",
         "fluid_status": "C",
         "fluid": "no",
-        "I-care": 1
+        "I-care": 1,
+        "recovery": 40
         
     },
     {
@@ -279,7 +287,8 @@
         "skinSore": "",
         "fluid_status": "C",
         "fluid": "Yes",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 50
     },
     {
         "NO": 9,
@@ -314,7 +323,8 @@
         "skinSore": "",
         "fluid_status": "C",
         "fluid": "Yes",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 60
     },
     {
         "NO": 10,
@@ -349,7 +359,8 @@
         "skinSore": "",
         "fluid_status": "C",
         "fluid": "no",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 60
     },
     {
         "NO": 11,
@@ -384,7 +395,8 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "no",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 80
     },
     {
         "NO": 12,
@@ -419,7 +431,8 @@
         "skinSore": "",
         "fluid_status": "G",
         "fluid": "Yes",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 90
     },
     {
         "NO": 13,
@@ -454,7 +467,8 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "no",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 90
     },
     {
         "NO": 14,
@@ -489,7 +503,8 @@
         "skinSore": "",
         "fluid_status": "G",
         "fluid": "Yes",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 120
     },
     {
         "NO": 15,
@@ -524,7 +539,8 @@
         "skinSore": "",
         "fluid_status": "G",
         "fluid": "no",
-        "I-care": 1
+        "I-care": 1,
+        "recovery": 100
         
     },
     {
@@ -560,7 +576,8 @@
         "skinSore": "",
         "fluid_status": "G",
         "fluid": "Yes",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 120
         
     },
     {
@@ -596,7 +613,8 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "no",
-        "I-care": 1
+        "I-care": 1,
+        "recovery": 30
         
     },
     {
@@ -632,7 +650,8 @@
         "skinSore": "",
         "fluid_status": "C",
         "fluid": "Yes",
-        "I-care": 1
+        "I-care": 1,
+        "recovery": 60
     },
     {
         "NO": 19,
@@ -667,7 +686,8 @@
         "skinSore": "",
         "fluid_status": "C",
         "fluid": "Yes",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 60
     },
     {
         "NO": 20,
@@ -702,7 +722,8 @@
         "skinSore": "",
         "fluid_status": "A",
         "fluid": "Yes",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 30
     },
     {
         "NO": 21,
@@ -737,7 +758,8 @@
         "skinSore": "",
         "fluid_status": "C",
         "fluid": "no",
-        "I-care": 0
+        "I-care": 0,
+        "recovery": 60
     },
     {
         "NO": 22,

@@ -43,7 +43,7 @@
    background-color: rgb(198, 172, 172);
    color: #fff;
    border-radius: 0 1.5em 1.5em 0;
-   left: 0; /* 버튼이 navContent의 왼쪽에 위치 */
+   left: 20px; /* 버튼이 navContent의 왼쪽에 위치 */
    top: 0;
    cursor: pointer;
    text-align: center;
@@ -54,8 +54,8 @@
 .navTitle span {
    transform: rotate(90deg); /* 텍스트는 원래 방향으로 회전 */
    display: inline-block;
-   font-size: 20px;
-   padding-top: 20px;
+   font-size: 15px;
+   padding-top: 40px;
    width: 60px;
    position: relative;
    top: 30px;
@@ -79,21 +79,24 @@
  .navTitle1 {
    background-color: rgb(194, 174, 126);
    transform: rotate(180deg);
-   height: 100px;
+   height: 120px;
+   width: 20px;
    top: 0px;
  }
  
  .navTitle2 {
    background-color: rgb(125, 128, 130);
    transform: rotate(180deg);
-   height: 100px;
-   top: 160px;
+   height: 120px;
+   width: 20px;
+   top: 140px;
  }
  
  .navTitle3 {
    background-color: rgb(211, 0, 45);
    transform: rotate(180deg);
-   height: 100px;
-   top: 300px;
+   height: 120px;
+   width: 20px;
+   top: 280px;
  }
  

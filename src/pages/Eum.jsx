@@ -9,7 +9,9 @@ import { useContext } from "react"
 const Eum = ()=>{
    const { data } = useContext(Health);
   
-   const tempData = data.slice(0,20)
+   // Eum Box 데이터 < slice 사용 x
+   const tempData = data.slice(0,15)
+   //data.slice(0,10)
 
    return(
       <div className={styles.eumContainer}>
