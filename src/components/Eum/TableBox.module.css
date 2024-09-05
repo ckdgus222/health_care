@@ -1,6 +1,6 @@
 .tableContainer {
    flex: 1;
-   height: 92vh; /* 테이블 컨테이너를 화면 전체 높이에 맞춤 */
+   height: 92.4vh; /* 테이블 컨테이너를 화면 전체 높이에 맞춤 */
    width: 100%;
    background-color: #1f2e82;
    border: 1px solid #000;

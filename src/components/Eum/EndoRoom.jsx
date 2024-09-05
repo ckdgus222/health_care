@@ -17,6 +17,7 @@ const EndoRoom = ({ tempData }) => {
   });
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)
+ 
 
   // 상태랜덤
   // const arr = [];
@@ -156,7 +157,7 @@ const EndoRoom = ({ tempData }) => {
             <div className={styles.innerGridText}>{`${Math.floor(Math.random() * 150) + 50}/${Math.floor(Math.random() * 100)}`}</div>
             <div className={styles.innerGridText}></div>
             { item.condition === emergency.LEVEL_1_EMERGENCY && (
-              <Alert item={item} i={i} emergencyLevel={emergency} currentValue={currentValue[i]} totalDuration={totalDuration} recoveryOut={recoveryOut[i]}/>
+              <Alert item={item} i={i} emergencyLevel={setEmergency} currentValue={currentValue[i]} totalDuration={totalDuration} recoveryOut={recoveryOut[i]}/>
             )}
             {/* {item.condition === "낙상" && emergency.LEVEL_2_EMERGENCY && (
               <Alert item={item} emergencyLevel={emergency.LEVEL_2_EMERGENCY} />

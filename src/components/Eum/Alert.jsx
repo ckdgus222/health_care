@@ -2,9 +2,12 @@ import styles from "./Alert.module.css";
 import Button from "../Button";
 
 const Alert = ({ item, emergencyLevel, currentValue, totalDuration, recoveryOut }) => {
-   
+   // 확인 로직 체크 
    const emergencyClick = (item)=>{
-      item.condition = false
+      emergencyLevel(prevState => ({
+         ...prevState,
+         LEVEL_1_EMERGENCY: false // 또는 적절한 상태 변경 로직 적용
+      }));
    }
 
   return (
