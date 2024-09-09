@@ -7,62 +7,29 @@ import { useEffect } from "react";
 
 // inner-grid 반복 더미
 // 회복시간 , 안정율 , 혈압 고정
-const EndoRoom = ({ tempData }) => {
+const EndoRoom = ({ tempData, setTempData }) => {
   const { data } = useContext(Health);
   const [currentValue, setCurrentValue] = useState(tempData.map(() => 0));
   const [recoveryOut, setRecoveryOut] = useState(tempData.map(() => 0));
-  const [emergency, setEmergency] = useState({
-    NORMAL: false,
-    LEVEL_1_EMERGENCY: false,
-  });
+  const [selectedPatient, setSelectedPatient] = useState([]);
+  // 여러 환자 위급 상황이있을때 객체로 상태를 보관 방법 생각
+  // const [emergency, setEmergency] = useState({
+  //   NORMAL: false,
+  //   LEVEL_1_EMERGENCY: tempData.condition,
+  // });
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)
- 
+  console.log(selectedPatient)
 
-  // 상태랜덤
-  // const arr = [];
-  // for (let i = 0; i < 15; i++) {
-  //   const randomArp = ["a", "b", "n"];
-  //   const max = Math.floor(Math.random() * 3);
-  //   arr.push(randomArp[max]);
-  // }
-  
-  // 위급상황 필터링 
-  const filterPatients = ()=> {
-    return tempData.filter(
-      (item) => item.condition === "주사" || item.condition === "낙상"
-    )
-  }
-  // 위급상황 단계별로 구해야함
-  const emergencyClick = (item)=>{
-    if(item.condition){
-      setEmergency((prev)=>({
-        ...prev,
-        LEVEL_1_EMERGENCY: item.condition
-      }))
-      return
-    }
-    return 
-  }
-  // 위급상황 데이터 필터링후
-  // 레벨 1,2 단계로 나눈후 상태 업데이트
-  useEffect(()=>{
-    const filterData = filterPatients()
-    filterData.forEach((patient)=>{
-      if(patient.condition === "주사"){
-        setEmergency((prev)=> ({
-          ...prev,
-          LEVEL_1_EMERGENCY: true,
-        }))
-      }else if(patient.condition === "낙상"){
-        setEmergency((prev)=>({
-          ...prev,
-          LEVEL_2_EMERGENCY: true,
-        }))
-      }
-    })
-  }, [tempData])
 
+  useEffect(() => {
+    // map 으로 condition 데이터가 있는 값을 찾아서 배열 생성
+    // [0,1,null,null,,,,] 모든 요소를 순회후 데이터 있는 값만 새로운 배열로 만든후
+    // filter를 사용해 데이터가 있는 값만 필터링
+    const emergency = tempData.map((item, index) => (item.condition ? index : null)).filter((index) => index !== null);
+
+    setSelectedPatient(emergency);
+  }, [tempData]);
 
   useEffect(() => {
     const intervals = tempData.map((item, index) => {
@@ -125,12 +92,40 @@ const EndoRoom = ({ tempData }) => {
     return () => timeOut.forEach((interval) => clearInterval(interval));
   }, [tempData]);
 
-  
+  const emergencyClick = (index) => {
+    setTempData((prevTempData) =>
+      prevTempData.map((patient, i) => {
+        if (i === index) {
+          return { ...patient, condition: "" };
+        }
+        return patient;
+      })
+    );
+
+    setSelectedPatient((prev) => prev.filter((item) => item !== index));
+  };
+
+  const handlePatientClick = (i) => {
+    setSelectedPatient((prev) => {
+      // 중복 클릭을 허용하지 않도록 중복된 환자를 제거한 뒤 배열에 추가
+      const filtered = prev.filter((item) => item !== i);
+      return [...filtered, i]; // 클릭된 환자를 배열의 맨 끝에 추가
+    });
+  };
+
+  // {`${Math.floor(Math.random() * 150) + 50}/${Math.floor(Math.random() * 100)}`} (그리드 텍스트 심박수 )
+
   return (
     <div className={styles.endoContainer}>
       <div className={styles.outerGrid}>
         {tempData.map((item, i) => (
-          <div className={`${styles.innerGrid} ${item.condition && styles.emergencyPatient}`} key={i} onClick={()=>emergencyClick(item)}>
+          <div
+            className={`${styles.innerGrid} ${item.condition ? styles.emergencyPatient : ""}  ${
+              item.condition ? (selectedPatient[selectedPatient.length - 1] === i ? styles.emergencyFocuse : "") : null
+            }`}
+            key={i}
+            onClick={() => handlePatientClick(i)}
+          >
             <div className={`${styles.innerGridImg}`} style={{ backgroundImage: `url(/images/Image/${item.positionStatus}.gif)` }}>
               <img src={`/images/Back-img/bed/${item.barStatus}.png`} alt="" />
             </div>
@@ -154,14 +149,25 @@ const EndoRoom = ({ tempData }) => {
             <div className={styles.innerGridText} style={{ color: "dimgray" }}>
               {item.breathRate}
             </div>
-            <div className={styles.innerGridText}>{`${Math.floor(Math.random() * 150) + 50}/${Math.floor(Math.random() * 100)}`}</div>
+            <div className={styles.innerGridText}>93/82</div>
             <div className={styles.innerGridText}></div>
-            { item.condition === emergency.LEVEL_1_EMERGENCY && (
-              <Alert item={item} i={i} emergencyLevel={setEmergency} currentValue={currentValue[i]} totalDuration={totalDuration} recoveryOut={recoveryOut[i]}/>
-            )}
-            {/* {item.condition === "낙상" && emergency.LEVEL_2_EMERGENCY && (
-              <Alert item={item} emergencyLevel={emergency.LEVEL_2_EMERGENCY} />
-            )} */}
+            {selectedPatient.map((patientIndex) => {
+              const selectedItem = tempData[patientIndex];
+
+              if (!selectedItem || !selectedItem.condition) return null;
+
+              return (
+                <Alert
+                  key={patientIndex}
+                  item={selectedItem} // 선택 환자 전달
+                  selectedPatient={selectedPatient}
+                  currentValue={currentValue[patientIndex]}
+                  totalDuration={totalDuration}
+                  recoveryOut={recoveryOut[patientIndex]}
+                  onConfirm={() => emergencyClick(patientIndex)}
+                />
+              );
+            })}
           </div>
         ))}
       </div>

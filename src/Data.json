@@ -71,7 +71,8 @@
         "fluid_status": "G",
         "fluid": "no",
         "I-care": "1",
-        "recovery": 40
+        "recovery": 40,
+        "condition": "낙상"
     },
     {
         "NO": 3,
@@ -107,7 +108,8 @@
         "fluid_status": "A",
         "fluid": "Yes",
         "I-care": 1,
-        "recovery": 60
+        "recovery": 60,
+        "condition": "주사"
     },
     {
         "NO": 4,

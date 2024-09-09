@@ -20,6 +20,22 @@
   }
 }
 
+@keyframes alertDangerFlash {
+  0% {
+    background-color: rgba(215, 221, 17, 0.2); /* Slight red tint */
+    border-color: rgb(183, 255, 0);
+  }
+  50% {
+    background-color: transparent; /* Back to normal */
+    border-color: transparent;
+  }
+  100% {
+    background-color: rgba(148, 202, 21, 0.2); /* Slight red tint again */
+    border-color: rgb(221, 255, 0);
+  }
+}
+
+
 
 
 .endoContainer {
@@ -61,6 +77,11 @@
   animation: dangerFlash 1s infinite; /* Animation lasts 1s and repeats infinitely */
   border: 2px solid red; /* Red border to emphasize the emergency */
   transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+.emergencyFocuse{
+  animation: alertDangerFlash 1s infinite;
+  border: 2px solid rgb(212, 226, 19);
+  transition: all 0.3 ease-in-out;
 }
 
 .innerGridImg {
