@@ -1,0 +1,38 @@
+[
+   {
+      "room": "5111",
+      "status": "normal",
+      "value": 50
+   },
+   {
+      "room": "5112",
+      "status": "good",
+      "value": 30
+   },
+   {
+      "room": "5113",
+      "status": "good",
+      "value": 20
+   },
+   {
+      "room": "5114",
+      "status": "bad"
+   },
+   {
+      "room": "5115",
+      "status": "normal"
+   },
+   {
+      "room": "5116",
+      "status": "good"
+   },
+   {
+      "room": "5117",
+      "status": "good"
+   },
+   {
+      "room": "5118",
+      "status": "bad"
+   }
+ 
+]

@@ -8,6 +8,7 @@ const RoomMain = () =>{
   const [menuTab, setMenuTab] = useState(null)
   const [isTab, setTab] = useState(false)
   const [selects,setSelects] = useState(false)
+  const [roomAir, setRoomAir] = useState(false)
   
 
   
@@ -15,8 +16,8 @@ const RoomMain = () =>{
 
   return (
     <div className={styles.roomContainer}>
-      <HeaderContainer setSelects={setSelects} menuTab={menuTab} setTab={setTab} setMenuTab={setMenuTab}/>
-      <RoomContainer  selects={selects} menuTab={menuTab} isTab={isTab} setTab={setTab}/>
+      <HeaderContainer setRoomAir={setRoomAir} setSelects={setSelects} menuTab={menuTab} setTab={setTab} setMenuTab={setMenuTab}/>
+      <RoomContainer roomAir={roomAir} selects={selects} menuTab={menuTab} isTab={isTab} setTab={setTab}/>
       <Bottom/>
     </div>
   )

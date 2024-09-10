@@ -11,7 +11,7 @@ const TabsHeader = ({menuTab, setTab}) =>{
      <div className={styles.tabHeader}>
         <div className={styles.tabHeaderText}>
            <span>{menuTab}</span>
-           <span>  옵션</span>
+           <span>옵션</span>
         </div>
         <div className={styles.tabHeaderClose}>
          <Button text={"X"} onClick={closeTab} />

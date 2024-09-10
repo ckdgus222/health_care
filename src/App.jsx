@@ -5,6 +5,7 @@ import "./App.css";
 import { createContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import data from "./Data.json";
+import roomData from "./Room.json"
 import { useState } from "react";
 
 //react router 설치
@@ -19,7 +20,7 @@ function App() {
  
 
   return (
-    <Health.Provider value={{ data }}>
+    <Health.Provider value={{ data ,roomData}}>
       <Selected.Provider value={{ category, setCategory }}>
         <Routes>
           <Route path="/" element={<RoomMain />} />

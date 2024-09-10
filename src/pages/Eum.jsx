@@ -16,8 +16,8 @@ const Eum = ()=>{
 
    return(
       <div className={styles.eumContainer}>
-        <EndoRoom tempData={tempData} setTempData={setTempData}/>
-        <TableBox tempData={tempData}/>
+        <EndoRoom tempData={tempDataSlice} setTempData={setTempData}/>
+        <TableBox tempData={tempDataSlice}/>
         <EndoFooter/>
       </div>
    )

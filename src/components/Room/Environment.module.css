@@ -1,0 +1,100 @@
+.environmentContainer {
+   display: flex;
+   flex-direction: column;
+   height: 450px;
+   border: 1px solid red;
+   
+ }
+ 
+ .uShapeContainer {
+   position: relative;
+   width: 100%;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   padding-top: 20px;
+   border: 1px solid red;
+ }
+ .donut {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   background: conic-gradient(
+     green 0% 33%, /* 0%에서 33%까지는 초록색 */
+     yellow 33% 66%, /* 33%에서 66%까지는 노란색 */
+     red 66% 100% /* 66%에서 100%까지는 빨간색 */
+   );
+   position: relative;
+ }
+ 
+ .donut::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100px; /* 가운데 구멍의 크기 */
+   height: 100px;
+   background-color: white; /* 도넛 중앙을 흰색으로 */
+   border-radius: 50%;
+ }
+
+ .roomNumber {
+   border: 3px solid #2f2e2e;
+   border-radius: 20px;
+   width: 200px;
+   text-align: center;
+   position: relative; /* grid 레이아웃에서 정상적으로 동작하도록 변경 */
+   margin: 0 auto; /* 가운데 정렬 */
+   grid-column: 1 / -1; /* 두 열에 걸쳐서 위치 */
+   grid-row: 3; /* 세 번째 행에 위치 */
+   justify-self: center; /* 가운데 정렬 */
+   align-self: end; /* 행의 하단에 위치 */
+   bottom: 10px;
+ }
+ 
+ /* good 상태 - 예시: 녹색 애니메이션 */
+.good {
+   animation: goodAnimation 2s infinite alternate;
+   border-color: green;
+ }
+ 
+ @keyframes good {
+   0% {
+     transform: scale(1);
+   }
+   100% {
+     transform: scale(1.1);
+   }
+ }
+ 
+ /* normal 상태 - 예시: 파란색 애니메이션 */
+ .normal {
+   animation: normalAnimation 3s infinite alternate;
+   border-color: blue;
+ }
+ 
+ @keyframes normal {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(10deg);
+   }
+ }
+ 
+ /* bad 상태 - 예시: 빨간색 애니메이션 */
+ .bad {
+   animation: badAnimation 1.5s infinite alternate;
+   border-color: red;
+ }
+ 
+ @keyframes bad {
+   0% {
+     opacity: 1;
+   }
+   100% {
+     opacity: 0.5;
+   }
+ }
+ 
