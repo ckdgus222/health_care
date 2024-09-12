@@ -3,8 +3,9 @@
    height: 70px;
    position: absolute;
    padding: 10px;
-   z-index: 9999;
+   z-index: 100; /* 9999에서 100으로 내림 (handlePatiendClick Modal보다 하위로) */
    background-color: rgba(0, 0, 0, 0.6);
+   pointer-events: none; /* 클릭 이벤트 무시 (handlePatientClick 호출 가능하도록) */
 }
 .marginReft{
    margin-left: 23px;
