@@ -1,30 +1,93 @@
 import styles from "./Environment.module.css";
+import { Doughnut } from "react-chartjs-2";
+import { useEffect, useState } from "react";
+import "chart.js/auto";
 
 const Environment = ({ roomData }) => {
-   const co2Status = (status) => {
-      switch (status) {
-        case 'good':
-          return 'conic-gradient(green 0% 100%)'; // 전체 초록색
-        case 'normal':
-          return 'conic-gradient(green 0% 33%, yellow 33% 100%)'; // 초록과 노랑
-        case 'bad':
-          return 'conic-gradient(green 0% 33%, yellow 33% 66%, red 66% 100%)'; // 초록, 노랑, 빨강
-        default:
-          return 'conic-gradient(green 0% 100%)'; // 기본 초록색
-      }
+  // 여러 개의 방을 처리할 수 있도록 각 방의 차트 데이터를 저장하는 상태
+  const [chartDataList, setChartDataList] = useState([]);
+
+  useEffect(() => {
+    const generateChartData = (data) => {
+      return data.map(({ status, value }) => {
+        let backgroundColor = "";
+
+        switch (status) {
+          case "good":
+            backgroundColor = "green";
+            break;
+          case "normal":
+            backgroundColor = "yellow";
+            break;
+          case "bad":
+            backgroundColor = "red";
+            break;
+          default:
+            backgroundColor = "gray";
+        }
+
+        return {
+          datasets: [
+            {
+              data: [value, 100 - value],
+              backgroundColor: [backgroundColor, "#e0e0e0"],
+              hoverBackgroundColor: [backgroundColor, "#e0e0e0"],
+            },
+          ],
+        };
+      });
     };
 
+    if (roomData && roomData.length > 0) {
+      const chartData = generateChartData(roomData);
+      setChartDataList(chartData);
+    }
+  }, [roomData]);
+
+  if (!chartDataList.length) return null; // 차트 데이터가 없을 경우 렌더링하지 않음
+
   return (
-   <div className={styles.environmentContainer}>
-      <div className={styles.donutContainer}>
-        <div
-          className={styles.donut}
-          style={{ background: co2Status(roomData.status) }}
-        ></div>
-      </div>
-      <div className="">Room {roomData.room}</div>
+    <div className={styles.environmentContainer}>
+      {roomData.map((room, index) => (
+        <div key={room.room} className={styles.donutContainer}>
+          <div className={styles.donutContent}>
+            <Doughnut
+              data={chartDataList[index]}
+              width={250}
+              height={250}
+              options={{
+                cutout: "70%",
+                radius: "80%",
+                animation: {
+                  animateScale: true,
+                  animateRotate: true,
+                },
+              }}
+            />
+          </div>
+          <div className={styles.observation}>
+            {Array.from({ length : 3}).map((_, arrIndex) => (
+                <div className={styles.observationItem} key={arrIndex}>
+                  <Doughnut
+                    data={chartDataList[arrIndex]}
+                    width={100}
+                    height={100}
+                    options={{
+                      cutout: "70%",
+                      radius: "80%",
+                      animation: {
+                        animateScale: true,
+                        animateRotate: true,
+                      },
+                    }}
+                  />
+                </div>
+            ))}
+          </div>
+          <div className={styles.roomNumber}>Room {room.room}</div> {/* 방 번호 표시 */}
+        </div>
+      ))}
     </div>
   );
 };
-
 export default Environment;

@@ -13,26 +13,30 @@
       "room": "5113",
       "status": "good",
       "value": 20
-   },
-   {
+   }
+   ,{
       "room": "5114",
-      "status": "bad"
-   },
-   {
+      "status": "bad",
+      "value": 100
+   }
+   ,{
       "room": "5115",
-      "status": "normal"
+      "status": "good",
+      "value": 20
    },
    {
       "room": "5116",
-      "status": "good"
+      "status": "good",
+      "value": 20
    },
    {
       "room": "5117",
-      "status": "good"
+      "status": "good",
+      "value": 20
    },
    {
       "room": "5118",
-      "status": "bad"
+      "status": "good",
+      "value": 20
    }
- 
 ]

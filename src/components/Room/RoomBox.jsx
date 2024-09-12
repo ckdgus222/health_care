@@ -41,13 +41,10 @@ const RoomBox = ({ roomData,leftData, rightData, roomAir, data, room, selects, w
     setModalData({ ...data, order });
     setModalOpen(true);
   };
-
+ 
  
   return (
     <>
-      {roomAir ? (
-         <Environment roomData={roomData}/>
-      ) : (
         <div className={styles.room} style={{ width: width }}>
           <div className={styles.leftColumn}>
             {filterLeft.map((item) => (
@@ -79,7 +76,6 @@ const RoomBox = ({ roomData,leftData, rightData, roomAir, data, room, selects, w
             Room {leftData[0].roomNumber}
           </div>
         </div>
-      )}
       {isModalOpen && (
         <Modal
           data={modalData}

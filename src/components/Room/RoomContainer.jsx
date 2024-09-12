@@ -13,7 +13,7 @@ const RoomContainer = ({ roomAir, selects, menuTab, isTab, setTab }) => {
   for (let i = 0; i < data.length; i += 6) {
     chunkedData.push(data.slice(i, i + 6));
   }
-
+ 
 
   return (
     <div className={styles.container} onClick={() => setTab(false)}>
@@ -22,29 +22,31 @@ const RoomContainer = ({ roomAir, selects, menuTab, isTab, setTab }) => {
           <TabContent menuTab={menuTab} setTab={setTab} />
         </div>
       )}
+     {roomAir ? (<Environment roomData={roomData}/>):(
+       <div className={styles.roomContainer}>
+       {chunkedData.map((group, index) => {
+         const leftData = group.filter((item) => item.NO % 2 === 0);
+         const rightData = group.filter((item) => item.NO % 2 !== 0);
 
-      <div className={styles.roomContainer}>
-        {chunkedData.map((group, index) => {
-          const leftData = group.filter((item) => item.NO % 2 === 0);
-          const rightData = group.filter((item) => item.NO % 2 !== 0);
-
-          return (
-            <div key={index} className={styles.roomBox}>
-              <RoomBox
-                roomData={roomData}
-                roomAir={roomAir} // roomAir 상태 전달
-                selects={selects}
-                leftData={leftData}
-                rightData={rightData}
-                data={data}
-                room={index}
-                isModalOpen={isModalOpen}
-                setModalOpen={setModalOpen}
-              />
-            </div>
-          );
-        })}
-      </div>
+         return (
+           <div key={index} className={styles.roomBox}>
+             <RoomBox
+               roomData={roomData}
+               roomAir={roomAir} // roomAir 상태 전달
+               selects={selects}
+               leftData={leftData}
+               rightData={rightData}
+               data={data}
+               room={index}
+               isModalOpen={isModalOpen}
+               setModalOpen={setModalOpen}
+             />
+           </div>
+         );
+       })}
+     </div>
+     )}
+     
     </div>
   );
 };

@@ -10,10 +10,6 @@
   justify-content: center;
 }
 
-.roomAirData{
-  display: flex;
-}
-
 .leftColumn,
 .rightColumn {
   display: flex;
