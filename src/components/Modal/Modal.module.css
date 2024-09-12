@@ -45,9 +45,10 @@
 .modalPatient{
    width: 500px;
    display: flex;
+   flex-wrap: wrap;
 }
 .bedContainerRightModal{
-   width: 500px;
+   width: 100%;
 }
 .careRightBox{
    display: flex;
@@ -90,4 +91,4 @@
 /* .care_left_modal_text{
 
 }
-.care_right_img */ 
+.care_right_img */
