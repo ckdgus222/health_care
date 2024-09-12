@@ -5,12 +5,12 @@
    width: 100%; /* 전체 너비 */
    max-width: 100%; /* 한 줄에 5개가 배치될 수 있는 최대 너비 */
    background-color: black;
-   
- }
- 
 
- .donutContainer {
-   width: 300px;
+ }
+
+
+.donutContainer {
+   width: 360px; /* EunHyeok Jung 300 -> 360 */
    height: 400px;
    display: flex;
    flex-direction: column;
@@ -19,6 +19,7 @@
    position: relative;
    gap: 30px;
  }
+
  .donutContent{
    display: flex;
    align-items: center;
@@ -54,13 +55,13 @@
    align-self: end; /* 행의 하단에 위치 */
    bottom: 10px;
  }
- 
+
  /* good 상태 - 예시: 녹색 애니메이션 */
 .good {
    animation: goodAnimation 2s infinite alternate;
    border-color: green;
  }
- 
+
  @keyframes good {
    0% {
      transform: scale(1);
@@ -69,13 +70,13 @@
      transform: scale(1.1);
    }
  }
- 
+
  /* normal 상태 - 예시: 파란색 애니메이션 */
  .normal {
    animation: normalAnimation 3s infinite alternate;
    border-color: blue;
  }
- 
+
  @keyframes normal {
    0% {
      transform: rotate(0deg);
@@ -84,13 +85,13 @@
      transform: rotate(10deg);
    }
  }
- 
+
  /* bad 상태 - 예시: 빨간색 애니메이션 */
  .bad {
    animation: badAnimation 1.5s infinite alternate;
    border-color: red;
  }
- 
+
  @keyframes bad {
    0% {
      opacity: 1;
@@ -99,4 +100,3 @@
      opacity: 0.5;
    }
  }
- 
