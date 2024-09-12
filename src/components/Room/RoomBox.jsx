@@ -10,7 +10,18 @@ import { useContext, useState, useMemo } from "react";
 
 // Room Number 필터링
 
-const RoomBox = ({ roomData,leftData, rightData, roomAir, data, room, selects, width, isModalOpen, setModalOpen }) => {
+const RoomBox = ({
+  roomData,
+  leftData,
+  rightData,
+  roomAir,
+  data,
+  room,
+  selects,
+  width,
+  isModalOpen,
+  setModalOpen,
+}) => {
   const { category } = useContext(Selected);
   const [modalData, setModalData] = useState(null);
   const [viewType, setViewType] = useState("");
@@ -41,41 +52,46 @@ const RoomBox = ({ roomData,leftData, rightData, roomAir, data, room, selects, w
     setModalData({ ...data, order });
     setModalOpen(true);
   };
- 
- 
+
   return (
     <>
-        <div className={styles.room} style={{ width: width }}>
-          <div className={styles.leftColumn}>
-            {filterLeft.map((item) => (
-              <div key={`left-container-${item.NO}`} className={styles.leftContainer}>
-                {selects ? <Select data={item} /> : null}
-                <Left
-                  key={`left-${item.NO}`}
-                  data={item}
-                  onClick={() => handlePatientClick(item)}
-                  isModalOpen={isModalOpen}
-                />
-              </div>
-            ))}
-          </div>
-          <div className={styles.rightColumn}>
-            {filterRight.map((item) => (
-              <div key={`right-container-${item.NO}`} className={styles.rightContainer}>
-                {selects ? <Select margin={"marginReft"} data={item} /> : null}
-                <Right
-                  key={`right-${item.NO}`}
-                  data={item}
-                  onClick={() => handlePatientClick(item)}
-                  isModalOpen={isModalOpen}
-                />
-              </div>
-            ))}
-          </div>
-          <div className={styles.roomNumber} onClick={handleRoomModal}>
-            Room {leftData[0].roomNumber}
-          </div>
+      <div className={styles.room} style={{ width: width }}>
+        <div className={styles.leftColumn}>
+          {filterLeft.map((item) => (
+            <div
+              key={`left-container-${item.NO}`}
+              className={styles.leftContainer}
+            >
+              {selects ? <Select data={item} /> : null}
+              <Left
+                key={`left-${item.NO}`}
+                data={item}
+                onClick={() => handlePatientClick(item)}
+                isModalOpen={isModalOpen}
+              />
+            </div>
+          ))}
         </div>
+        <div className={styles.rightColumn}>
+          {filterRight.map((item) => (
+            <div
+              key={`right-container-${item.NO}`}
+              className={styles.rightContainer}
+            >
+              {selects ? <Select margin={"marginReft"} data={item} /> : null}
+              <Right
+                key={`right-${item.NO}`}
+                data={item}
+                onClick={() => handlePatientClick(item)}
+                isModalOpen={isModalOpen}
+              />
+            </div>
+          ))}
+        </div>
+        <div className={styles.roomNumber} onClick={handleRoomModal}>
+          Room {leftData[0].roomNumber}
+        </div>
+      </div>
       {isModalOpen && (
         <Modal
           data={modalData}
