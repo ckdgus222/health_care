@@ -1,11 +1,10 @@
-.navHead{
-   height: 100%;
+.header {
    display: flex;
-   gap: 150px;
-   top: 0;
-   left: 0;
-   right: 0;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #0a1b2a;
    width: 100%;
-   padding-left: 10px;
-   padding-right: 10px;
+   height: 100px;
+   padding: 0 20px 0 20px; /* 상하 패딩 0, 좌우 패딩 20px */
+   box-sizing: border-box; /* 패딩과 보더를 요소의 총 크기에 포함 */
 }

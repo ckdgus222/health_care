@@ -48,6 +48,8 @@ const RoomMain = () => {
         isTab={isTab}
         setTab={setTab}
       />
+      {/*<EquipmentContainer*/}
+      {/*  equipment={equipment}*/}
       <Bottom />
     </div>
   );

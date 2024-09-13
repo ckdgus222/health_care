@@ -17,16 +17,15 @@
    padding: 0.2rem 1.2rem;
    color: #fff;
 } */
-.fieldsetBox{
-   display: flex;
-   flex: 4;
+.fieldsetBox {
+    display: flex;
+    align-items: center;
 }
 
-.fieldSet{
-   display: flex;
-   align-items: center;
-   position: relative;
-
+.fieldSet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* 기본 라디오 버튼 숨기기 */
@@ -64,19 +63,17 @@
    background: white;
  } */
 
- /* 라벨 스타일 */
- .labelStyle {
-     width: 30px;
-   display: flex;
-   align-items: center;
-   cursor: pointer;
-   position: relative;
-   flex-direction: column;
-   gap: 10px;
-   /*margin-right: 8px;*/
- }
+/* 라벨과 라디오 버튼의 스타일을 조정하여 공간을 효율적으로 사용 */
+.labelStyle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
 
- .labelStyle p {
-   margin: 0;
-   font-size: 12px;
- }
+.labelStyle p {
+    margin: 0;
+    font-size: 12px;
+    color: #fff;
+}

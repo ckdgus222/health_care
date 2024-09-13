@@ -3,7 +3,6 @@ import Eums from "./Eums";
 import Fieldset from "./Fieldset";
 import ViewName from "./ViewName";
 import Menus from "./Menus";
-import Button from "../Button";
 import Setting from "./Setting";
 import styles from "./HeaderContainer.module.css";
 
@@ -18,25 +17,21 @@ const HeaderContainer = ({
   equipment,
 }) => {
   return (
-    <div className={styles.main}>
-      <Header>
+    <Header>
+      <div className={styles.leftSection}>
         <Eums />
+      </div>
+      <div className={styles.centerSection}>
         <ViewName text="이름보기" onClick={() => setSelects((prev) => !prev)} />
         <Fieldset />
-        <ViewName
-          text="병실환경"
-          onClick={setRoomAir}
-          checked={roomAir} // Bind roomAir state
-        />
-        <ViewName
-          text="기구관리"
-          onClick={setEquipment}
-          checked={equipment} // Bind equipment state
-        />
+        <ViewName text="병실환경" onClick={setRoomAir} checked={roomAir} />
+        <ViewName text="기구관리" onClick={setEquipment} checked={equipment} />
         <Menus menuTab={menuTab} setMenuTab={setMenuTab} setTab={setTab} />
+      </div>
+      <div className={styles.rightSection}>
         <Setting />
-      </Header>
-    </div>
+      </div>
+    </Header>
   );
 };
 
