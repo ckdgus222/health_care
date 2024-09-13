@@ -9,9 +9,10 @@ const Select = (item) => {
 
   return (
     <div  className={className}>
-      <p>{data.patName}</p>
+      {/* <p>{data.patName}</p>
       <p>{data.deptName}</p>
-      <p>{data.patSex}</p>
+      <p>{data.patSex}</p> */}
+      <p>하이</p>
     </div>
   );
 };

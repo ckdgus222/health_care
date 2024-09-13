@@ -1,8 +1,10 @@
 import HeaderContainer from "../components/Header/HeaderContainer"
 import RoomContainer from "../components/Room/RoomContainer"
 import Bottom from "../components/Bottom/Bottom"
+import Select from "../components/Room/Select"
 import styles from "./RoomMain.module.css"
 import { useState } from "react"
+
 
 const RoomMain = () =>{
   const [menuTab, setMenuTab] = useState(null)
