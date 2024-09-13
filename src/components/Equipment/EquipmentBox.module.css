@@ -1,0 +1,15 @@
+.equipmentBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.equipmentItem {
+    background-color: #333;
+    color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 import HeaderContainer from "../components/Header/HeaderContainer";
 import RoomContainer from "../components/Room/RoomContainer";
+import EquipmentContainer from "../components/Equipment/EquipmentContainer";
 import Bottom from "../components/Bottom/Bottom";
 import styles from "./RoomMain.module.css";
 import { useState } from "react";
@@ -41,15 +42,23 @@ const RoomMain = () => {
         roomAir={roomAir}
         equipment={equipment}
       />
-      <RoomContainer
-        roomAir={roomAir}
-        selects={selects}
-        menuTab={menuTab}
-        isTab={isTab}
-        setTab={setTab}
-      />
-      {/*<EquipmentContainer*/}
-      {/*  equipment={equipment}*/}
+      {equipment && (
+        <EquipmentContainer
+          selects={selects}
+          menuTab={menuTab}
+          isTab={isTab}
+          setTab={setTab}
+        />
+      )}
+      {!equipment && (
+        <RoomContainer
+          roomAir={roomAir}
+          selects={selects}
+          menuTab={menuTab}
+          isTab={isTab}
+          setTab={setTab}
+        />
+      )}
       <Bottom />
     </div>
   );

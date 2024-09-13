@@ -1,0 +1,138 @@
+[
+  {
+    "room": 1,
+    "equipment": [
+      {
+        "type": "wheelchair",
+        "x": 50,
+        "y": 100,
+        "code": "wheelchair1"
+      },
+      {
+        "type": "ivStand",
+        "x": 200,
+        "y": 150,
+        "code": "ivStand1"
+      }
+    ]
+  },
+  {
+    "room": 2,
+    "equipment": [
+      {
+        "type": "wheelchair",
+        "x": 80,
+        "y": 120,
+        "code": "wheelchair2"
+      },
+      {
+        "type": "ivStand",
+        "x": 250,
+        "y": 180,
+        "code": "ivStand2"
+      }
+    ]
+  },
+  {
+    "room": 3,
+    "equipment": [
+      {
+        "type": "wheelchair",
+        "x": 90,
+        "y": 130,
+        "code": "wheelchair3"
+      },
+      {
+        "type": "ivStand",
+        "x": 230,
+        "y": 140,
+        "code": "ivStand3"
+      }
+    ]
+  },
+  {
+    "room": 4,
+    "equipment": [
+      {
+        "type": "wheelchair",
+        "x": 120,
+        "y": 160,
+        "code": "wheelchair4"
+      },
+      {
+        "type": "ivStand",
+        "x": 280,
+        "y": 190,
+        "code": "ivStand4"
+      }
+    ]
+  },
+  {
+    "room": 5,
+    "equipment": [
+      {
+        "type": "wheelchair",
+        "x": 60,
+        "y": 110,
+        "code": "wheelchair5"
+      },
+      {
+        "type": "ivStand",
+        "x": 210,
+        "y": 170,
+        "code": "ivStand5"
+      }
+    ]
+  },
+  {
+    "room": 6,
+    "equipment": [
+      {
+        "type": "wheelchair",
+        "x": 100,
+        "y": 140,
+        "code": "wheelchair6"
+      },
+      {
+        "type": "ivStand",
+        "x": 220,
+        "y": 160,
+        "code": "ivStand6"
+      }
+    ]
+  },
+  {
+    "room": 7,
+    "equipment": [
+      {
+        "type": "wheelchair",
+        "x": 70,
+        "y": 90,
+        "code": "wheelchair7"
+      },
+      {
+        "type": "ivStand",
+        "x": 240,
+        "y": 200,
+        "code": "ivStand7"
+      }
+    ]
+  },
+  {
+    "room": 8,
+    "equipment": [
+      {
+        "type": "wheelchair",
+        "x": 110,
+        "y": 150,
+        "code": "wheelchair8"
+      },
+      {
+        "type": "ivStand",
+        "x": 260,
+        "y": 170,
+        "code": "ivStand8"
+      }
+    ]
+  }
+]
