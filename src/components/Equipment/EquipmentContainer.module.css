@@ -13,7 +13,7 @@
 .equipment-roomContainer {
     position: relative;
     width: 350px;
-    height: 240px;
+    height: 400px;
     border: 2px solid #333;
     border-radius: 10px;
     overflow: hidden;
