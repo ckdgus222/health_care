@@ -1,11 +1,3 @@
-/*.container {*/
-/*    width: 100%;*/
-/*    height: 90vh;*/
-/*    display: flex;*/
-/*    box-sizing: border-box;*/
-/*    position: relative;*/
-/*}*/
-
 .equipment_container {
     width: 100%;
     height: 90vh;
@@ -35,7 +27,12 @@
 
 .equipment {
     position: absolute;
-    font-size: 24px;
+}
+
+.equipmentImage {
+    width: 25px;
+    height: 25px;
+    cursor: pointer; /* Ensure the cursor changes on hover */
 }
 
 .equipment-roomNumber {
@@ -48,3 +45,18 @@
     border-radius: 5px;
 }
 
+/* Modal styling */
+.hoverModal {
+    position: fixed; /* Position modal relative to the viewport */
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 9999; /* High z-index to ensure it's always on top */
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none; /* Modal will not interfere with hover */
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
