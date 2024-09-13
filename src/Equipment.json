@@ -9,10 +9,10 @@
         "code": "wheelchair1"
       },
       {
-        "type": "ivStand",
+        "type": "iv-stand",
         "x": 200,
         "y": 150,
-        "code": "ivStand1"
+        "code": "iv-stand1"
       }
     ]
   },
@@ -26,10 +26,10 @@
         "code": "wheelchair2"
       },
       {
-        "type": "ivStand",
+        "type": "iv-stand",
         "x": 250,
         "y": 180,
-        "code": "ivStand2"
+        "code": "iv-stand2"
       }
     ]
   },
@@ -43,10 +43,10 @@
         "code": "wheelchair3"
       },
       {
-        "type": "ivStand",
+        "type": "iv-stand",
         "x": 230,
         "y": 140,
-        "code": "ivStand3"
+        "code": "iv-stand3"
       }
     ]
   },
@@ -60,10 +60,10 @@
         "code": "wheelchair4"
       },
       {
-        "type": "ivStand",
+        "type": "iv-stand",
         "x": 280,
         "y": 190,
-        "code": "ivStand4"
+        "code": "iv-stand4"
       }
     ]
   },
@@ -77,10 +77,10 @@
         "code": "wheelchair5"
       },
       {
-        "type": "ivStand",
+        "type": "iv-stand",
         "x": 210,
         "y": 170,
-        "code": "ivStand5"
+        "code": "iv-stand5"
       }
     ]
   },
@@ -94,10 +94,10 @@
         "code": "wheelchair6"
       },
       {
-        "type": "ivStand",
+        "type": "iv-stand",
         "x": 220,
         "y": 160,
-        "code": "ivStand6"
+        "code": "iv-stand6"
       }
     ]
   },
@@ -111,10 +111,10 @@
         "code": "wheelchair7"
       },
       {
-        "type": "ivStand",
+        "type": "iv-stand",
         "x": 240,
         "y": 200,
-        "code": "ivStand7"
+        "code": "iv-stand7"
       }
     ]
   },
@@ -128,10 +128,10 @@
         "code": "wheelchair8"
       },
       {
-        "type": "ivStand",
+        "type": "iv-stand",
         "x": 260,
         "y": 170,
-        "code": "ivStand8"
+        "code": "iv-stand8"
       }
     ]
   }
