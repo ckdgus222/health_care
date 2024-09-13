@@ -19,7 +19,7 @@
 } */
 .fieldsetBox{
    display: flex;
-   flex: 2;
+   flex: 4;
 }
 
 .fieldSet{
@@ -35,7 +35,7 @@
    opacity: 0;
    cursor: pointer;
  }
- 
+
  /* 커스텀 라디오 버튼 만들기 */
  .customRadio {
    width: 1.25em;
@@ -46,12 +46,12 @@
    vertical-align: middle;
    transition: background-color 0.3s ease;
  }
- 
+
  /* 라디오 버튼이 체크되었을 때 스타일 */
  .radioInput:checked + .customRadio {
    background-color: #ad4f4f;
  }
- 
+
  /* 체크된 상태에서 내부에 점 추가
  .radioInput:checked + .customRadio::after {
    content: "";
@@ -63,18 +63,19 @@
    border-radius: 50%;
    background: white;
  } */
- 
+
  /* 라벨 스타일 */
  .labelStyle {
+     width: 30px;
    display: flex;
    align-items: center;
    cursor: pointer;
    position: relative;
    flex-direction: column;
    gap: 10px;
-   margin-right: 8px;
+   /*margin-right: 8px;*/
  }
- 
+
  .labelStyle p {
    margin: 0;
    font-size: 12px;

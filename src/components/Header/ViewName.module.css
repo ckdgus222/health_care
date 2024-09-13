@@ -1,13 +1,13 @@
-.viewBox{
+.viewBox {
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 300px;
-   flex: 1;
-   position: relative;
-   left: -150px;
+   flex: 0 1 auto; /* 여유 공간을 채우지 않도록 설정 */
+   margin-right: 5px; /* 요소 간 여백을 줄이기 위한 margin */
 }
-.viewText{
+
+
+.viewText {
    font-size: 14px;
    color: #fff;
    padding-right: 5px;
@@ -52,7 +52,8 @@
 input:checked + .slider::before {
    transform: translateX(26px); /* 체크 시 26px로 이동 */
 }
-input:checked + .slider{
+
+input:checked + .slider {
    background-color: #2196F3;
 }
 
