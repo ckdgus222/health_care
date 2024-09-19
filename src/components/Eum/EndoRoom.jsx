@@ -98,15 +98,14 @@ const EndoRoom = ({ tempData, setTempData }) => {
 
   const emergencyClick = useCallback(
       (index) => {
-        setTempData((prevTempData) => {
-          const updatedData = prevTempData.map((patient, i) => {
-            if (i === index && patient.condition !== "") {
-              return { ...patient, condition: "" };
-            }
-            return patient;
-          });
-          return updatedData; // 변경된 데이터가 있는 경우에만 업데이트
-        });
+        setTempData((prevTempData) =>
+            prevTempData.map((patient, i) => {
+              if (i === index && patient.condition !== "") {
+                return { ...patient, condition: "" };
+              }
+              return patient;
+            })
+        );
         setSelectedPatient((prev) => prev.filter((item) => item !== index));
       },
       [setTempData, setSelectedPatient]
