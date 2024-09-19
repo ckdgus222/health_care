@@ -52,7 +52,7 @@
   grid-template-rows: repeat(5, 1fr);
   gap: 0px;
   height: 92.4vh;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 .recoveryTime{
   width: 100%;
