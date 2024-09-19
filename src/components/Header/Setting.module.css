@@ -1,34 +1,28 @@
-
-.mainContainer{
+.mainContainer {
    color: #fff;
    display: flex;
    flex-direction: column;
-   gap: 10px;
-   align-items: center;
-   padding-top: 20px;
-}
-.userLogin{
-   font-size: 12px;
-}
-.iconLogout{
-   width: 15px;
-   text-align: center;
-   margin-right: 0px;
-   margin-left: 5px;
-   margin-top: 0px;
-   vertical-align: text-bottom;
-}
-.nav{
-   display: flex;
-   gap: 1rem;
+   align-items: flex-end;
+   gap: 5px;
 }
 
-.nav > span > img{
-   width: 25px 
+.userLogin {
+   font-size: 12px;
 }
-.nav span:nth-child(2){
+
+.iconLogout {
+   width: 15px;
+   margin-left: 5px;
+   vertical-align: text-bottom;
    cursor: pointer;
 }
-.nav span:nth-child(3){
+
+.nav {
+   display: flex;
+   gap: 10px;
+}
+
+.nav > span > img {
+   width: 25px;
    cursor: pointer;
 }

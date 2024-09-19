@@ -17,16 +17,15 @@
    padding: 0.2rem 1.2rem;
    color: #fff;
 } */
-.fieldsetBox{
-   display: flex;
-   flex: 2;
+.fieldsetBox {
+    display: flex;
+    align-items: center;
 }
 
-.fieldSet{
-   display: flex;
-   align-items: center;
-   position: relative;
-
+.fieldSet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* 기본 라디오 버튼 숨기기 */
@@ -35,7 +34,7 @@
    opacity: 0;
    cursor: pointer;
  }
- 
+
  /* 커스텀 라디오 버튼 만들기 */
  .customRadio {
    width: 1.25em;
@@ -46,12 +45,12 @@
    vertical-align: middle;
    transition: background-color 0.3s ease;
  }
- 
+
  /* 라디오 버튼이 체크되었을 때 스타일 */
  .radioInput:checked + .customRadio {
    background-color: #ad4f4f;
  }
- 
+
  /* 체크된 상태에서 내부에 점 추가
  .radioInput:checked + .customRadio::after {
    content: "";
@@ -63,19 +62,18 @@
    border-radius: 50%;
    background: white;
  } */
- 
- /* 라벨 스타일 */
- .labelStyle {
-   display: flex;
-   align-items: center;
-   cursor: pointer;
-   position: relative;
-   flex-direction: column;
-   gap: 10px;
-   margin-right: 8px;
- }
- 
- .labelStyle p {
-   margin: 0;
-   font-size: 12px;
- }
+
+/* 라벨과 라디오 버튼의 스타일을 조정하여 공간을 효율적으로 사용 */
+.labelStyle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.labelStyle p {
+    margin: 0;
+    font-size: 12px;
+    color: #fff;
+}
