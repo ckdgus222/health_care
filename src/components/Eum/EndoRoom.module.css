@@ -1,4 +1,4 @@
-/* 
+/*
 @keyframes flash {
   0% { background-color: rgb(153, 45, 45); }
   50%{ background-color: rgb(187, 47, 47);}
@@ -81,7 +81,7 @@
 .emergencyFocuse{
   animation: alertDangerFlash 1s infinite;
   border: 2px solid rgb(212, 226, 19);
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .innerGridImg {
@@ -109,7 +109,7 @@
   display: inline-block;
   justify-content: center;
   align-items: center;
- 
+
 }
 
 .innerGridText{
