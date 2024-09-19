@@ -1,6 +1,7 @@
 import RoomMain from "./pages/RoomMain";
 import Acting from "./pages/Acting";
 import Eum from "./pages/Eum";
+import Begin from "./pages/Begin.jsx";
 import "./App.css";
 import { createContext } from "react";
 import { Routes, Route } from "react-router-dom";
@@ -21,7 +22,8 @@ function App() {
     <Health.Provider value={{ data, roomData, equipmentData }}>
       <Selected.Provider value={{ category, setCategory }}>
         <Routes>
-          <Route path="/" element={<RoomMain />} />
+          <Route path="/" element={<Begin />} />
+          <Route path="/roommain" element={<RoomMain />} />
           <Route path="/acting" element={<Acting />} />
           <Route path="/eum" element={<Eum />} />
         </Routes>

@@ -1,9 +1,14 @@
 @import url('./fonts/fonts.css');
 
 * {
-   overflow-x: hidden;
+   -ms-overflow-style: none;
 }
 
 body {
    font-family: 'Apple SD Gothic Neo', sans-serif;
+   overflow: hidden;
+}
+
+body::-webkit-scrollbar{
+   display:none;
 }
