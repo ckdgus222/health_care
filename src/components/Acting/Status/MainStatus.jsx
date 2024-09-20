@@ -13,8 +13,6 @@ const MainStatus = ()=> {
    const {data} = useContext(Health);
    const [selectedRoom, setSelectedRoom] = useState("5111");
 
-   
-
    return(
       <div className={styles.mainStatus}>
         <RoomStatus data={data} setSelectedRoom={setSelectedRoom}/>

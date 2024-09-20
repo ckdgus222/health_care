@@ -1,16 +1,41 @@
-.roomBox{
-   width: 100%;
+.roomStatusContainer {
+   position: absolute;
+   top: 10%;
+   right: 0;
+   background-color: #000;
+   width: 25vw;
+   height: 35vh;
    display: flex;
-   flex-wrap: wrap;
-   gap: 3px;
+   flex-direction: column;
+   padding: 10px;
+   box-sizing: border-box;
    color: #fff;
 }
-.roomStatus{
-   border: 1px solid gray;
-   width: 80px;
-   border-radius: 20px;
-   padding: 5px 5px;
+
+.roomTitle {
    text-align: center;
-   cursor: pointer;
+   font-size: 1.2rem;
+   margin-bottom: 15px;
+   color: #ddff00;
 }
 
+.roomList {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   overflow-y: auto;
+   flex-grow: 1;
+}
+
+.roomItem {
+   background-color: #3154ff;
+   padding: 10px;
+   border-radius: 5px;
+   text-align: center;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.roomItem:hover {
+   background-color: #ff00d9;
+}
