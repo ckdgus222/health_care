@@ -1,41 +1,62 @@
+/* RoomStatus.module.css */
+
 .roomStatusContainer {
-   position: absolute;
-   top: 10%;
-   right: 0;
-   background-color: #000;
-   width: 25vw;
-   height: 35vh;
    display: flex;
    flex-direction: column;
-   padding: 10px;
-   box-sizing: border-box;
+   width: 25vw;
    color: #fff;
+   height: 35vh;
+   box-sizing: border-box;
 }
 
-.roomTitle {
-   text-align: center;
-   font-size: 1.2rem;
-   margin-bottom: 15px;
-   color: #ddff00;
+/* RoomList와 RoomDetails를 포함하는 컨테이너 스타일 */
+.roomListContainer {
+   padding: 10px;
+   border-bottom: 1px solid #2f2e2e;
+}
+
+.title {
+   font-size: 1.5em;
+   margin-bottom: 10px;
 }
 
 .roomList {
    display: flex;
-   flex-direction: column;
+   flex-wrap: wrap;
    gap: 10px;
-   overflow-y: auto;
-   flex-grow: 1;
 }
 
 .roomItem {
-   background-color: #3154ff;
+   background-color: #2f2e2e;
    padding: 10px;
-   border-radius: 5px;
-   text-align: center;
    cursor: pointer;
-   transition: background-color 0.3s ease;
+   border-radius: 4px;
+   transition: background-color 0.3s;
 }
 
 .roomItem:hover {
-   background-color: #ff00d9;
+   background-color: #444;
+}
+
+/* 선택된 병실의 상세 정보를 보여주는 컨테이너 스타일 */
+.roomDetailsContainer {
+   display: flex;
+   flex: 1;
+   overflow-y: auto;
+}
+
+.leftColumn,
+.rightColumn {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 10px;
+}
+
+.patientInfoContainer {
+   background-color: #1f1f1f;
+   padding: 10px;
+   border: 1px solid #2f2e2e;
+   border-radius: 4px;
 }

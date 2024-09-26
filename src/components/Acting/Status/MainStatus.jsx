@@ -1,8 +1,6 @@
-import styles from "./MainStatus.module.css"
-import RoomStatus from "./RoomStatus"
-import Left from "../../Room/Left"
-import Right from "../../Room/Right"
-import SideBox from "./SideBox"
+import styles from "./MainStatus.module.css";
+import RoomStatus from "./RoomStatus";
+import SideBox from "./SideBox";
 import { useContext } from "react";
 import { Health } from "./../../../App";
 import { useState } from "react"
@@ -15,8 +13,8 @@ const MainStatus = ()=> {
 
    return(
       <div className={styles.mainStatus}>
-        <RoomStatus data={data} setSelectedRoom={setSelectedRoom}/>
-        <SideBox data={data} selectedRoom={selectedRoom}/>
+        {/*<RoomStatus data={data} setSelectedRoom={setSelectedRoom}/>*/}
+        {/*<SideBox data={data} selectedRoom={selectedRoom}/>*/}
       </div>
    )
 }

@@ -2,7 +2,9 @@ import styles from "./RoomStatus.module.css";
 import { useContext } from "react";
 import { Health } from "./../../../App";
 
-const RoomStatus = ({ data, setSelectedRoom }) => {
+const RoomStatus = ({ setSelectedRoom }) => {
+
+    const {data} = useContext(Health);
 
   const seen = new Set();
   const filterRoom = data.filter(item => {

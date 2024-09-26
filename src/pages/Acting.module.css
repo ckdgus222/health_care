@@ -27,6 +27,17 @@
     overflow: hidden;
 }
 
+/*.roomstatus {*/
+/*    position: absolute;*/
+/*    top: 10%;*/
+/*    right: 0;*/
+/*    background-color: #000;*/
+/*    width: 25vw;*/
+/*    height: 35vh;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/* Acting.module.css 추가 수정 */
 .roomstatus {
     position: absolute;
     top: 10%;
@@ -36,6 +47,7 @@
     height: 35vh;
     overflow: hidden;
 }
+
 
 .actingtable {
     position: absolute;
@@ -64,3 +76,5 @@
     height: 100vh;
     overflow: hidden;
 }
+
+
