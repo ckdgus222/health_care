@@ -5,6 +5,7 @@ import ViewName from "./ViewName";
 import Menus from "./Menus";
 import Setting from "./Setting";
 import styles from "./HeaderContainer.module.css";
+import PageChangeMenu from "./EumHeader/PageChangeMenu.jsx";
 
 const HeaderContainer = ({
   setRoomAir,
@@ -26,7 +27,8 @@ const HeaderContainer = ({
         <Fieldset />
         <ViewName text="병실환경" onClick={setRoomAir} checked={roomAir} />
         <ViewName text="기구관리" onClick={setEquipment} checked={equipment} />
-        <Menus menuTab={menuTab} setMenuTab={setMenuTab} setTab={setTab} />
+          <PageChangeMenu />
+        {/*<Menus menuTab={menuTab} setMenuTab={setMenuTab} setTab={setTab} />*/}
       </div>
       <div className={styles.rightSection}>
         <Setting />

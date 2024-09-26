@@ -4,6 +4,7 @@ import EquipmentContainer from "../components/Equipment/EquipmentContainer"
 import Bottom from "../components/Bottom/Bottom"
 import styles from "./RoomMain.module.css"
 import { useState } from "react"
+import Header from "../components/MUI/Header.jsx";
 
 const RoomMain = () => {
   const [menuTab, setMenuTab] = useState(null);
@@ -42,6 +43,7 @@ const RoomMain = () => {
         roomAir={roomAir}
         equipment={equipment}
       />
+      {/*<Header />*/}
       {equipment && (
         <EquipmentContainer
           selects={selects}
