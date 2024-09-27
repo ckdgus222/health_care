@@ -42,7 +42,14 @@ function App() {
                             <Route path="/eum" element={<Eum />} />
                         </>
                     )}
-                    {isTablet && <Route path="/" element={<TabletApp />} />}
+                    {isTablet && (
+                        <>
+                            <Route path="/" element={<TabletApp />} />
+                            <Route path="/roommain" element={<RoomMain />} />
+                            <Route path="/eum" element={<Eum />} />
+                        </>
+                        )
+                    }
                     {isMobile && <Route path="/" element={<MobileApp />} />}
                 </Routes>
             </Selected.Provider>

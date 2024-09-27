@@ -1,0 +1,97 @@
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    color: #ff8024;
+    text-align: center;
+    padding: 57px 80px 293px;
+    font: 700 50px Inter, sans-serif;
+}
+
+.mainLogo {
+    aspect-ratio: 4.46;
+    object-fit: contain;
+    object-position: center;
+    width: 304px;
+    align-self: center;
+    max-width: 100%;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1580px;
+    flex-direction: column;
+}
+
+.productContainer {
+    display: flex;
+    margin-top: 233px;
+    gap: 40px 100px;
+    flex-wrap: wrap;
+}
+
+.productButton {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Add hover effect for productButton */
+.productButton:hover {
+    cursor: pointer; /* Ensure cursor changes to pointer on hover */
+}
+
+.productImage {
+    aspect-ratio: 1.77;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.buttonText {
+    align-self: center;
+    margin-top: 41px;
+}
+
+@media (max-width: 991px) {
+    .mainContainer {
+        font-size: 40px;
+        white-space: initial;
+        padding: 0 20px 100px;
+    }
+
+    .content {
+        max-width: 100%;
+        font-size: 40px;
+        white-space: initial;
+    }
+
+    .productContainer {
+        max-width: 100%;
+        margin-top: 40px;
+        font-size: 40px;
+        white-space: initial;
+    }
+
+    .productButton {
+        max-width: 100%;
+        font-size: 40px;
+        white-space: initial;
+    }
+
+    .productImage {
+        max-width: 100%;
+    }
+
+    .buttonText {
+        margin-top: 40px;
+        font-size: 40px;
+    }
+}
