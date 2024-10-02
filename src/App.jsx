@@ -24,7 +24,7 @@ function App() {
       <Selected.Provider value={{ category, setCategory }}>
         <Routes>
           <Route path="/" element={<Begin />} />
-          <Route path="endoScope" element={<EndoScope/>}/>
+          <Route path="/endoScope" element={<EndoScope/>}/>
           <Route path="/roomMain" element={<RoomMain />} />
           <Route path="/acting" element={<Acting />} />
           <Route path="/eum" element={<Eum />} />
