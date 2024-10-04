@@ -10,6 +10,7 @@ import { useState } from "react"
 const Eum = ()=>{
    const { data } = useContext(Health);
    const [tempData, setTempData] = useState(data)
+   
    // Eum Box 데이터 < slice 사용 x
    const tempDataSlice = tempData.slice(0,15)
    //data.slice(0,10)
