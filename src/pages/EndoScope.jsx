@@ -7,6 +7,7 @@ const EndoScope = () => {
   const [imgName, setImgName] = useState("defaultImage");
   const [barImg, setBarImg] = useState("undefined")
 
+
   useEffect(() => {
    // 데스크톱 ip
    // 포트번호
@@ -14,9 +15,10 @@ const EndoScope = () => {
 
     const options = {
       clean: true,
-      connectTimeout: 4000,
+      // 수신 대기시간 조정 < 
+      connectTimeout: 3000,
 
-      clientId: "react_mqtt_client_" + Math.random().toString(16).substr(2, 8),
+      clientId: "mqtt_client_" + Math.random().toString(16).substr(2, 8),
     };
 
     const client = mqtt.connect(brokerUrl, options);
@@ -42,7 +44,7 @@ const EndoScope = () => {
       client.end()
     });
 
-    return ()=>{
+    return ()=> {
       if(client.connected){
          client.end();
       }
@@ -85,6 +87,7 @@ const EndoScope = () => {
      // defulet 추가
    }
  }
+
   useEffect(() => {
    const newImgName = poseData();
    const newBarImg = barData();
@@ -93,9 +96,9 @@ const EndoScope = () => {
    setBarImg(newBarImg);
  }, [message]);
 
+ 
  const imgUrl = `./../../public/images/Image/${imgName}.gif`;
- console.log(message)
- console.log(barImg)
+ 
 
   //bed 이미지 json
   return (
