@@ -21,7 +21,8 @@ const EndoRoom = ({ tempData, setTempData }) => {
   
   // MQTT 셋팅 리팩토링 커스텀훅 제작
   const [message, move] = useMqtt();
-
+  console.log(message)
+  console.log(move)
 
  
  

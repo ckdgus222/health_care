@@ -13,7 +13,7 @@ const useMqtt = () =>{
   useEffect(() => {
     // 데스크톱 ip
     // 포트번호
-    const brokerUrl = "ws://192.168.0.17:9001";
+    const brokerUrl = "ws://192.168.0.31:9001";
 
     const options = {
       clean: true,
