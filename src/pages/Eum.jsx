@@ -10,6 +10,8 @@ import { useState } from "react"
 const Eum = ()=>{
    const { data } = useContext(Health);
    const [tempData, setTempData] = useState(data)
+   const [footerMessge,setFooterMessage] = useState("")
+   
    
    // Eum Box 데이터 < slice 사용 x
    const tempDataSlice = tempData.slice(0,15)
@@ -18,8 +20,8 @@ const Eum = ()=>{
    return(
       <div className={styles.eumContainer}>
         <EndoRoom tempData={tempDataSlice} setTempData={setTempData}/>
-        <TableBox tempData={tempDataSlice}/>
-        <EndoFooter/>
+        <TableBox tempData={tempDataSlice} footerMessage={footerMessge} setFooterMessage={setFooterMessage}/>
+        <EndoFooter footerMessage={footerMessge}/>
       </div>
    )
 }

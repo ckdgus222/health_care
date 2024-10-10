@@ -3,7 +3,7 @@ import RadarData from "./../../Radar.json";
 import BedData from "./../../Bed.json";
 import styles from "./SideMenu.module.css";
 
-const SideMenu = () => {
+const SideMenu = ({footerMessage,setFooterMessage}) => {
   const [select, setSelect] = useState(null);
   const [animation, setAnimation] = useState("");
 
@@ -14,6 +14,7 @@ const SideMenu = () => {
   const [selectedRadar, setSelectedRadar] = useState(null);
 
   const [mapping, setMapping] = useState([]);
+
 
   const toggleMenu = (menu) => {
     if (select === menu) {
@@ -28,6 +29,8 @@ const SideMenu = () => {
     }
   };
 
+  
+  //  환경설정 침대 레이더 맵핑 함수
   const handleBedMatching = (Number) => {
     setBedList((prev) => {
       let newBedList = [...prev];
@@ -93,8 +96,11 @@ const SideMenu = () => {
       return null
     
   }
+
   
- 
+  const footerProps = (e) =>{
+    setFooterMessage(e.target.value)
+  }
   
   return (
     <>
@@ -150,10 +156,7 @@ const SideMenu = () => {
         </div>
         {select === "clinic" && (
           <div className={styles.navContent}>
-            <div>메시지 입력,</div>
-            <div>생체신호 History</div>
-            <div>회복 Histroy</div>
-            <div>I-care등록관리</div>
+            <textarea name="공지사항" value={footerMessage} onChange={footerProps} style={{border:"none",resize:"none",width:"500px",height:"300px"}}>{footerMessage}</textarea>
           </div>
         )}
       </div>
