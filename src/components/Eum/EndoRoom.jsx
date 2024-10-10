@@ -1,6 +1,9 @@
 import styles from "./EndoRoom.module.css";
 import Alert from "./Alert";
-import mqtt from "mqtt";
+import HeartImg from "./../../../public/icons/heart.png"
+import useMqtt from "../../hooks/useMqtt";
+import { poseData,barData } from "../../util/mqttData";
+
 import { useState, useLayoutEffect, useEffect, useCallback, useMemo } from "react";
 
 // inner-grid 반복 더미
@@ -15,100 +18,13 @@ const EndoRoom = ({ tempData, setTempData }) => {
   //   LEVEL_1_EMERGENCY: tempData.condition,
   // });
 
+  
   // MQTT 셋팅 리팩토링 커스텀훅 제작
-  const [message, setMessage] = useState({});
-  const [imgName, setImgName] = useState("defaultImage");
-  const [barImg, setBarImg] = useState("undefined");
-
-  useEffect(() => {
-    // 데스크톱 ip
-    // 포트번호
-    const brokerUrl = "ws://192.168.0.17:9001";
-
-    const options = {
-      clean: true,
-      // 수신 대기시간 조정 <
-      connectTimeout: 3000,
-
-      clientId: "mqtt_client_" + Math.random().toString(16).substr(2, 8),
-    };
-
-    const client = mqtt.connect(brokerUrl, options);
-
-    client.on("connect", () => {
-      //topic
-      client.subscribe("more/test", (err) => {
-        if (err) {
-          console.error("err");
-        }
-      });
-    });
-
-    client.on("message", (topic, payload) => {
-      const receivedMessage = payload.toString();
-      const jsonMessage = JSON.parse(receivedMessage);
-
-      setMessage(jsonMessage);
-    });
-
-    client.on("error", (err) => {
-      console.error("Connection error", err);
-      client.end();
-    });
-
-    return () => {
-      if (client.connected) {
-        client.end();
-      }
-    };
-  }, []);
-
-  const poseData = (pose) => {
-    switch (pose) {
-      case "p02_suhh":
-        return "m10a";
-      case "p08_rshh":
-        return "m11a";
-      case "p06_lshh":
-        return "m12a";
-      case "p04_buhh":
-        return "m13a";
-      case "p10_sith":
-        return "m21s";
-      case "p11_sitf":
-        return "m22s";
-      default:
-        return "defaultImage";
-      // defulet 추가
-    }
-  };
-  const barData = (rail) => {
-    switch (rail) {
-      case "r01_rail(00)":
-        return "00";
-      case "r02_rail(10)":
-        return "10";
-      case "r03_rail(01)":
-        return "01";
-      case "r04_rail(11)":
-        return "11";
-      default:
-        return "00";
-      // defulet 추가
-    }
-  };
-  useEffect(() => {
-    const newImgName = poseData();
-    const newBarImg = barData();
-
-    setImgName(newImgName);
-    setBarImg(newBarImg);
-  }, [message]);
-
-  console.log(message);
-
-  // mqtt 끝
-
+  const [message, move] = useMqtt();
+  console.log(message)
+  console.log(move)
+ 
+ 
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)
 
@@ -241,9 +157,12 @@ const EndoRoom = ({ tempData, setTempData }) => {
           if (i === 0) {
             currentItem.positionStatus = message.pose;
             currentItem.barStatus = message.rail;
+            currentItem.ecgRate = move.heart;
+            currentItem.breathRate = move.breath
+            currentItem.move = move.move
           }
-          console.log(currentItem);
-
+        
+     
           return (
             <div
               className={`${styles.innerGrid} ${currentItem.condition ? styles.emergencyPatient : ""} ${
@@ -276,17 +195,17 @@ const EndoRoom = ({ tempData, setTempData }) => {
                   style={{
                     color: recoveryOut[i] >= currentItem.recovery ? "red" : "white",
                   }}
-                >{`${recoveryOut[i]}M`}</div>
+                >{/*`${recoveryOut[i]}M`*/ currentItem.move}</div>
                 <div className={styles.innerGridText}>{`G${i + 5}`}</div>
               </div>
               <div className={styles.innerGridText} style={{ gridArea: "5/3/6/5" }}>
-                {currentItem.ecgRate}
+              {currentItem.ecgRate}
               </div>
-              <div className={styles.innerGridText} style={{ color: "dimgray" }}>
+              <div className={styles.innerGridText} style={{color:"red"}} >
                 {currentItem.breathRate}
               </div>
               <div className={styles.innerGridText}>93/82</div>
-              <div className={styles.innerGridText}></div>
+              <div className={styles.innerGridText} style={{position:"relative", left:"20px"}}><img src={HeartImg} alt="" /></div>
             </div>
           );
         })}
