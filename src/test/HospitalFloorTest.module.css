@@ -1,0 +1,417 @@
+.homebuttonDemoIcon {
+    position: absolute;
+    top: 44px;
+    left: 1876px;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+.preferencebuttonDemoIcon {
+    position: absolute;
+    top: 44px;
+    left: 1837px;
+    width: 25px;
+    height: 24.7px;
+    object-fit: cover;
+}
+.warningbuttonDemoIcon {
+    position: absolute;
+    top: 47px;
+    left: 1798px;
+    width: 25px;
+    height: 22px;
+    object-fit: cover;
+}
+.userlogininfoDemo {
+    position: absolute;
+    top: 27px;
+    left: 1804px;
+}
+.b {
+    position: relative;
+}
+.dropdownpageChild {
+    width: 25px;
+    position: relative;
+    height: 25px;
+    object-fit: contain;
+}
+.dropdownpage {
+    position: absolute;
+    top: 31px;
+    left: 1243px;
+    background-color: #ccc;
+    width: 180px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 19px;
+    box-sizing: border-box;
+    gap: 10px;
+    font-size: 20px;
+    color: #000;
+}
+.eclipseOutline {
+    width: 24px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid #e6e6e6;
+    box-sizing: border-box;
+    height: 24px;
+}
+.filterbutton1 {
+    width: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.filtercontainer {
+    position: absolute;
+    top: 30px;
+    left: 587px;
+    background-color: #0a1b2a;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.div {
+    position: relative;
+    font-weight: 600;
+}
+.eclipseFill {
+    width: 16px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #fff;
+    height: 16px;
+}
+.togglebutton {
+    width: 50px;
+    border-radius: 999px;
+    background-color: #ccc;
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 2px;
+    box-sizing: border-box;
+}
+.togglebuttonname {
+    position: absolute;
+    top: 37px;
+    left: 414px;
+    width: 126px;
+    height: 26px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+}
+.div1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffff00;
+}
+.logocontainer {
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 19px;
+    font-size: 20px;
+}
+.header {
+    width: 1920px;
+    position: relative;
+    background-color: #0a1b2a;
+    height: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.image4Icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 66.5px;
+    object-fit: cover;
+}
+.icon {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    width: 130px;
+    height: 60.7px;
+    object-fit: cover;
+}
+.bedview {
+    width: 150px;
+    position: relative;
+    height: 66.5px;
+}
+.bedviewcontainer {
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.fluidstatusimgIcon {
+    width: 20px;
+    position: relative;
+    height: 20px;
+    object-fit: cover;
+}
+.fluidinfocontainer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.fluidcontainer {
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 5px;
+    gap: 5px;
+}
+.monitoringdatacontainer {
+    align-self: stretch;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+.patientcontainer {
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.oxyzenmaskIcon {
+    width: 25px;
+    position: relative;
+    height: 25px;
+    object-fit: cover;
+}
+.therapyordercontainer {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+.leftbedsidecontainer1 {
+    align-self: stretch;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    gap: 10px;
+}
+.leftbedsidecontainer2 {
+    width: 185px;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+.leftroomsectioncontainer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.bedviewIcon {
+    width: 150px;
+    position: relative;
+    height: 66.5px;
+    object-fit: contain;
+}
+.roomsectioncontainer {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+}
+.room5111Wrapper {
+    border-radius: 30px;
+    border: 1px solid #2f2e2e;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 70px;
+}
+.roomoverview1 {
+    width: 376px;
+    background-color: #000;
+    border: 1px solid #505050;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    gap: 10px;
+}
+.hospitalfloor {
+    align-self: stretch;
+    flex: 1;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 10px;
+    gap: 0px;
+}
+.content {
+    align-self: stretch;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.buttonpage {
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ccc;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 19px;
+    box-sizing: border-box;
+}
+.buttoncontainer {
+    position: absolute;
+    top: 13px;
+    left: 1578px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.hospitalstatuscontainer {
+    position: absolute;
+    top: 16px;
+    left: 1188px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 15px;
+    color: #fff;
+}
+.footer {
+    width: 1920px;
+    position: relative;
+    background-color: #0a1b2a;
+    height: 50px;
+    overflow: hidden;
+    flex-shrink: 0;
+    font-size: 13px;
+    color: #000;
+}
+.hospitalfloortest {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 1080px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+    font-family: Inter;
+}
+
+.rightroomsectioncontainer {
+    /* 우측 섹션 컨테이너 스타일 */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* 우측 정렬 */
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.rightbedsidecontainer1,
+.rightbedsidecontainer2 {
+    /* 우측 침대 컨테이너 스타일 */
+    width: 185px;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end; /* 우측 정렬 */
+    padding: 10px 0px;
+    box-sizing: border-box;
+    gap: 10px;
+}

@@ -1,0 +1,235 @@
+.header {
+    background-color: #0a1b2a;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 14px 19px 14px 0;
+}
+
+@media (max-width: 991px) {
+    .header {
+        max-width: 100%;
+    }
+}
+
+.logoContainer {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    padding: 0 19px;
+}
+
+@media (max-width: 991px) {
+    .logoContainer {
+        white-space: initial;
+    }
+}
+
+.eumCare {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.floorNumber {
+    color: #ff0;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.controlsContainer {
+    align-self: stretch;
+    display: flex;
+    gap: 40px;
+    margin: auto 0;
+}
+
+@media (max-width: 991px) {
+    .controlsContainer {
+        max-width: 100%;
+    }
+}
+
+.toggleButtonName {
+    display: flex;
+    min-height: 26px;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    justify-content: center;
+    margin: auto 0;
+}
+
+.toggleLabel {
+    color: #fff;
+    text-align: center;
+    align-self: stretch;
+    margin: auto 0;
+    font: 600 14px Inter, sans-serif;
+}
+
+.toggleButton {
+    border-radius: 999px;
+    background-color: #ccc;
+    align-self: stretch;
+    display: flex;
+    min-height: 20px;
+    align-items: center;
+    overflow: hidden;
+    justify-content: flex-start;
+    width: 50px;
+    margin: auto 0;
+    padding: 0 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.toggleIndicator {
+    background-color: #fff;
+    border-radius: 50%;
+    align-self: stretch;
+    display: flex;
+    min-height: 16px;
+    width: 16px;
+    height: 16px;
+    margin: auto 0;
+}
+
+.filterContainer {
+    background-color: #0a1b2a;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 700 10px Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+    .filterContainer {
+        white-space: initial;
+    }
+}
+
+.filterButton {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    margin: auto 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+}
+
+@media (max-width: 991px) {
+    .filterButton {
+        white-space: initial;
+    }
+}
+
+.filterIndicator {
+    border-radius: 50%;
+    display: flex;
+    min-height: 24px;
+    width: 24px;
+    border: 2px solid #e6e6e6;
+}
+
+.filterLabel {
+    margin-top: 5px;
+}
+
+.userControls {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px 100px;
+    flex-wrap: wrap;
+    margin: auto 0;
+}
+
+@media (max-width: 991px) {
+    .userControls {
+        max-width: 100%;
+    }
+}
+
+.pageChangeButton {
+    background-color: #ccc;
+    display: flex;
+    margin-top: 4px;
+    min-height: 40px;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+    padding: 0 19px;
+    font: 700 20px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdownIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 25px;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.userLoginInfo {
+    color: #fff;
+    text-align: center;
+    align-self: flex-start;
+    font: 700 10px Inter, sans-serif;
+    margin: 0;
+}
+
+.userActions {
+    display: flex;
+    margin-top: 5px;
+    gap: 14px;
+}
+
+.userActions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.userActions img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 25px;
+}

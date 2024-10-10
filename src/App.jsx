@@ -16,6 +16,9 @@ import equipmentData from './Equipment.json';
 
 // 스타일
 import './App.css';
+import HospitalFloor from "./Tablet/pages/HospitalFloor/HospitalFloor.jsx";
+import HospitalFloorDemo from "./Tablet/pages/HospitalFloorDemo/HospitalFloorDemo.jsx";
+import HospitalFloorTest from "./test/HospitalFloorTest.jsx";
 
 // 컨텍스트 생성
 export const Health = createContext(undefined);
@@ -40,6 +43,8 @@ function App() {
                             <Route path="/" element={<DesktopApp />} />
                             <Route path="/roommain" element={<RoomMain />} />
                             <Route path="/eum" element={<Eum />} />
+                            <Route path="/hospitalfloor" element={<HospitalFloorDemo />} />
+                            <Route path="/hospitalfloortest" element={<HospitalFloorTest />} />
                         </>
                     )}
                     {isTablet && (
@@ -47,6 +52,7 @@ function App() {
                             <Route path="/" element={<TabletApp />} />
                             <Route path="/roommain" element={<RoomMain />} />
                             <Route path="/eum" element={<Eum />} />
+                            <Route path="/hospitalfloor" element={<HospitalFloor />} />
                         </>
                         )
                     }
