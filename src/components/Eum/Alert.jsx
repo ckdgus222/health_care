@@ -4,6 +4,8 @@ import { memo } from "react";
 
 const Alert = ({ item, selectedPatient, currentValue, totalDuration, recoveryOut, onConfirm }) => {
    
+
+
   return (
     <>
       <div className={styles.alertBox}>

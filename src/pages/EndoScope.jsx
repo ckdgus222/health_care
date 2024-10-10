@@ -95,7 +95,7 @@ const EndoScope = () => {
    setImgName(newImgName);
    setBarImg(newBarImg);
  }, [message]);
-
+   
  
  const imgUrl = `./../../public/images/Image/${imgName}.gif`;
  
