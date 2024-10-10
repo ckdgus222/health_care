@@ -2,7 +2,7 @@ import RoomMain from "./pages/RoomMain";
 import Acting from "./pages/Acting";
 import Eum from "./pages/Eum";
 import Begin from "./pages/Begin.jsx";
-import EndoScope from "./pages/Endoscope.jsx";
+import EndoScope from "./pages/EndoScope.jsx";
 import "./App.css";
 import { createContext } from "react";
 import { Routes, Route } from "react-router-dom";
