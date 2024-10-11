@@ -3,9 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 // 각 기기별 페이지 컴포넌트
-import DesktopApp from "./Desktop/pages/DesktopApp.jsx";
-import TabletApp from "./Tablet/pages/TabletApp.jsx";
-import MobileApp from "./Mobile/pages/MobileApp.jsx";
 import RoomMain from "./Desktop/pages/RoomMain.jsx";
 import Eum from "./Desktop/pages/Eum.jsx";
 
@@ -19,6 +16,7 @@ import './App.css';
 import HospitalFloor from "./Tablet/pages/HospitalFloor/HospitalFloor.jsx";
 import HospitalFloorDemo from "./Tablet/pages/HospitalFloorDemo/HospitalFloorDemo.jsx";
 import HospitalFloorTest from "./test/HospitalFloorTest.jsx";
+import MainPortal from "./Common/pages/MainPortal.jsx";
 
 // 컨텍스트 생성
 export const Health = createContext(undefined);
@@ -40,7 +38,7 @@ function App() {
                 <Routes>
                     {isDesktop && (
                         <>
-                            <Route path="/" element={<DesktopApp />} />
+                            <Route path="/" element={<MainPortal />} />
                             <Route path="/roommain" element={<RoomMain />} />
                             <Route path="/eum" element={<Eum />} />
                             <Route path="/hospitalfloor" element={<HospitalFloorDemo />} />
@@ -49,14 +47,15 @@ function App() {
                     )}
                     {isTablet && (
                         <>
-                            <Route path="/" element={<TabletApp />} />
+                            <Route path="/" element={<MainPortal />} />
                             <Route path="/roommain" element={<RoomMain />} />
                             <Route path="/eum" element={<Eum />} />
                             <Route path="/hospitalfloor" element={<HospitalFloor />} />
                         </>
                         )
                     }
-                    {isMobile && <Route path="/" element={<MobileApp />} />}
+                    <Route path="/" element={<MainPortal />} />
+                    {isMobile && <Route path="/" element={<MainPortal />} />}
                 </Routes>
             </Selected.Provider>
         </Health.Provider>
