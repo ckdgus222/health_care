@@ -1,10 +1,16 @@
 import styles from "./EndoRoom.module.css";
 import Alert from "./Alert";
-import HeartImg from "./../../../public/icons/heart.png"
+import HeartImg from "./../../../public/icons/heart.png";
 import useMqtt from "../../hooks/useMqtt";
-import { poseData,barData } from "../../util/mqttData";
+import { poseData, barData } from "../../util/mqttData";
 
-import { useState, useLayoutEffect, useEffect, useCallback, useMemo } from "react";
+import {
+  useState,
+  useLayoutEffect,
+  useEffect,
+  useCallback,
+  useMemo,
+} from "react";
 
 // inner-grid 반복 더미
 // 회복시간 , 안정율 , 혈압 고정
@@ -16,10 +22,13 @@ const EndoRoom = ({ tempData, setTempData }) => {
   // const [emergency, setEmergency] = useState({
   //   NORMAL: false,
   //   LEVEL_1_EMERGENCY: tempData.condition,
-  // });
-   
-  const [message, move] = useMqtt()
- 
+  // })
+
+  // MQTT 셋팅 리팩토링 커스텀훅 제작
+  const [message, move] = useMqtt();
+  console.log(message);
+  console.log(move);
+
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)
 
@@ -27,7 +36,9 @@ const EndoRoom = ({ tempData, setTempData }) => {
     // map 으로 condition 데이터가 있는 값을 찾아서 배열 생성
     // [0,1,null,null,,,,] 모든 요소를 순회후 데이터 있는 값만 새로운 배열로 만든후
     // filter를 사용해 데이터가 있는 값만 필터링
-    const emergency = tempData.map((item, index) => (item.condition ? index : null)).filter((index) => index !== null);
+    const emergency = tempData
+      .map((item, index) => (item.condition ? index : null))
+      .filter((index) => index !== null);
     setSelectedPatient(emergency);
   }, [tempData]);
 
@@ -52,7 +63,10 @@ const EndoRoom = ({ tempData, setTempData }) => {
           const blinkInterval = setInterval(() => {
             setCurrentValue((prevValues) => {
               const newValues = [...prevValues];
-              newValues[index] = prevValues[index] === firstStageEnd ? recoveryTime : firstStageEnd;
+              newValues[index] =
+                prevValues[index] === firstStageEnd
+                  ? recoveryTime
+                  : firstStageEnd;
               return newValues;
             });
           }, 1000); // 깜빡이는 속도 (1초)
@@ -137,7 +151,14 @@ const EndoRoom = ({ tempData, setTempData }) => {
         />
       );
     });
-  }, [selectedPatient, tempData, currentValue, totalDuration, recoveryOut, emergencyClick]);
+  }, [
+    selectedPatient,
+    tempData,
+    currentValue,
+    totalDuration,
+    recoveryOut,
+    emergencyClick,
+  ]);
 
   // {`${Math.floor(Math.random() * 150) + 50}/${Math.floor(Math.random() * 100)}`} (그리드 텍스트 심박수 )
 
@@ -147,21 +168,23 @@ const EndoRoom = ({ tempData, setTempData }) => {
         {tempData.map((item, i) => {
           // Create a copy of the current item
           let currentItem = { ...item };
-            
+
           // For the 0th and 1st items, update positionStatus and barStatus from mqttData
           if (i === 0) {
             currentItem.positionStatus = message.pose;
             currentItem.barStatus = message.rail;
             currentItem.ecgRate = move.heart;
-            currentItem.breathRate = move.breath
-            currentItem.move = move.move
+            currentItem.breathRate = move.breath;
+            currentItem.move = move.move;
           }
-        
-     
+
           return (
             <div
               className={`${styles.innerGrid} ${currentItem.condition ? styles.emergencyPatient : ""} ${
-                currentItem.condition && selectedPatient[selectedPatient.length - 1] === i ? styles.emergencyFocuse : ""
+                currentItem.condition &&
+                selectedPatient[selectedPatient.length - 1] === i
+                  ? styles.emergencyFocuse
+                  : ""
               }`}
               key={currentItem.patNumber}
               onClick={() => handlePatientClick(i)}
@@ -172,7 +195,10 @@ const EndoRoom = ({ tempData, setTempData }) => {
                   backgroundImage: `url(/images/Image/${i === 0 ? poseData(currentItem.positionStatus) : item.positionStatus}.gif)`,
                 }}
               >
-                <img src={`/images/Back-img/bed/${i === 0 ? barData(currentItem.barStatus) : item.barStatus}.png`} alt="" />
+                <img
+                  src={`/images/Back-img/bed/${i === 0 ? barData(currentItem.barStatus) : item.barStatus}.png`}
+                  alt=""
+                />
               </div>
               <div className={styles.innerGridBar}>
                 <div
@@ -188,19 +214,30 @@ const EndoRoom = ({ tempData, setTempData }) => {
                 <div
                   className={styles.innerGridText}
                   style={{
-                    color: recoveryOut[i] >= currentItem.recovery ? "red" : "white",
+                    color:
+                      recoveryOut[i] >= currentItem.recovery ? "red" : "white",
                   }}
-                >{/*`${recoveryOut[i]}M`*/ currentItem.move}</div>
+                >
+                  {/*`${recoveryOut[i]}M`*/ currentItem.move}
+                </div>
                 <div className={styles.innerGridText}>{`G${i + 5}`}</div>
               </div>
-              <div className={styles.innerGridText} style={{ gridArea: "5/3/6/5" }}>
-              {currentItem.ecgRate}
+              <div
+                className={styles.innerGridText}
+                style={{ gridArea: "5/3/6/5" }}
+              >
+                {currentItem.ecgRate}
               </div>
-              <div className={styles.innerGridText} style={{color:"red"}} >
+              <div className={styles.innerGridText} style={{ color: "red" }}>
                 {currentItem.breathRate}
               </div>
               <div className={styles.innerGridText}>93/82</div>
-              <div className={styles.innerGridText} style={{position:"relative", left:"20px"}}><img src={HeartImg} alt="" /></div>
+              <div
+                className={styles.innerGridText}
+                style={{ position: "relative", left: "20px" }}
+              >
+                <img src={HeartImg} alt="" />
+              </div>
             </div>
           );
         })}
