@@ -3,14 +3,15 @@ import EndoRoom from "../components/Eum/EndoRoom"
 import TableBox from "../components/Eum/TableBox"
 import EndoFooter from "../components/Eum/EndoFooter"
 import { Health } from "../App"
-import { useContext } from "react"
+import { createContext, useContext } from "react"
 import { useState } from "react"
 
+export const FooterMessageContext = createContext(undefined);
 
 const Eum = ()=>{
    const { data } = useContext(Health);
    const [tempData, setTempData] = useState(data)
-   const [footerMessge,setFooterMessage] = useState("")
+   const [footerMessage,setFooterMessage] = useState("")
    
    
    // Eum Box 데이터 < slice 사용 x
@@ -18,11 +19,13 @@ const Eum = ()=>{
    //data.slice(0,10)
 
    return(
+      <FooterMessageContext.Provider value={{footerMessage,setFooterMessage}}>
       <div className={styles.eumContainer}>
         <EndoRoom tempData={tempDataSlice} setTempData={setTempData}/>
-        <TableBox tempData={tempDataSlice} footerMessage={footerMessge} setFooterMessage={setFooterMessage}/>
-        <EndoFooter footerMessage={footerMessge}/>
+        <TableBox tempData={tempDataSlice} />
+        <EndoFooter/>
       </div>
+      </FooterMessageContext.Provider>
    )
 }
 

@@ -17,13 +17,8 @@ const EndoRoom = ({ tempData, setTempData }) => {
   //   NORMAL: false,
   //   LEVEL_1_EMERGENCY: tempData.condition,
   // });
-
-  
-  // MQTT 셋팅 리팩토링 커스텀훅 제작
-  const [message, move] = useMqtt();
-
-
- 
+   
+  const [message, move] = useMqtt()
  
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)
@@ -152,7 +147,7 @@ const EndoRoom = ({ tempData, setTempData }) => {
         {tempData.map((item, i) => {
           // Create a copy of the current item
           let currentItem = { ...item };
-
+            
           // For the 0th and 1st items, update positionStatus and barStatus from mqttData
           if (i === 0) {
             currentItem.positionStatus = message.pose;

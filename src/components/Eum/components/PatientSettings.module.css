@@ -1,0 +1,136 @@
+/* 슬라이드 애니메이션 */
+@keyframes slideOut {
+    from {
+      right: 0;
+    }
+    to {
+      right: -600px; /* 컨텐츠와 버튼이 함께 사라짐 */
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      right: -600px; /* 컨텐츠와 버튼이 함께 들어옴 */
+    }
+    to {
+      right: 0; /* 컨텐츠와 버튼이 화면 안으로 들어옴 */
+    }
+  }
+  
+  /* Nav 관련 */
+  .navBox {
+    position: fixed;
+    width: 640px;
+    top: 30%;
+    right: -600px;
+    height: 40px;
+  }
+  
+  .expand {
+    animation: slideIn 0.8s forwards;
+    right: 0;
+    height: 320px;
+  }
+  
+  .collapse {
+    animation: slideOut 0.8s forwards;
+    height: 40px;
+    right: -640px;
+  }
+  
+  .navTitle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(198, 172, 172);
+    color: #fff;
+    border-radius: 0 1.5em 1.5em 0;
+    left: 20px; /* 버튼이 navContent의 왼쪽에 위치 */
+    top: 0;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1; /* 버튼이 컨텐츠 위에 표시되도록 z-index 조정 */
+  
+  }
+  .navTitle span {
+    display: inline-block;
+    transform: rotate(-270deg); /* 부모의 회전을 상쇄하고 원래 방향으로 돌림 */
+    font-size: 15px;
+    text-align: center;
+    padding-top: 40px;
+    width: 60px;
+    position: relative;
+    top: 30px;
+  }
+  
+  .navTitle1 {
+    background-color: rgb(194, 174, 126);
+    transform: rotate(180deg);
+    height: 120px;
+    width: 20px;
+    top: 0px;
+  }
+  
+  .navContent {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    background-color: #e1d8d8;
+    opacity: 0.9;
+    margin-left: 40px; /* 버튼과 컨텐츠 사이에 여백을 줍니다 */
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* 맵핑 관련 */
+  .matchingBox {
+    display: flex;
+  }
+  
+  .bedBox,
+  .mappingBox,
+  .radarBox {
+    flex: 1;
+    border: 1px solid rgb(28, 26, 26);
+    height: 240px;
+  }
+  
+  .bedBox > ul > li,
+  .radarBox > ul > li {
+    border: 1px solid black;
+    height: 22px;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+  }
+  
+  .dataMatching {
+    border: 3px solid red;
+    height: 100%;
+  }
+  
+  .matching {
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .mappingBox {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 100%;
+  }
+  
+  .bed,
+  .radar {
+    width: 50px;
+    height: 24px;
+    text-align: center;
+    border: 1px solid blue;
+  }
+  

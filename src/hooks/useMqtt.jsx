@@ -27,7 +27,7 @@ const useMqtt = () =>{
 
     client.on("connect", () => {
       //topic
-      client.subscribe(["moreiot","more/test"], (err) => {
+      client.subscribe(["more/hbm","more/pose"], (err) => {
         if (err) {
           console.error("err");
         }

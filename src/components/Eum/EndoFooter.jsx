@@ -1,8 +1,12 @@
+import { useContext } from "react"
+import { FooterMessageContext } from "../../pages/Eum"
 import styles from "./EndoFooter.module.css"
 
 
-const EndoFooter = ({footerMessage})=>{
-   console.log(footerMessage)
+const EndoFooter = ()=>{
+   const {footerMessage} = useContext(FooterMessageContext)
+
+ 
    return (
       <div className={styles.footerBox}>
         <div className={styles.footerText}>
