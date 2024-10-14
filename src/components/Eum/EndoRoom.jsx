@@ -26,8 +26,6 @@ const EndoRoom = ({ tempData, setTempData }) => {
 
   // MQTT 셋팅 리팩토링 커스텀훅 제작
   const [message, move] = useMqtt();
-  console.log(message);
-  console.log(move);
 
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)
@@ -231,7 +229,7 @@ const EndoRoom = ({ tempData, setTempData }) => {
               <div className={styles.innerGridText} style={{ color: "red" }}>
                 {currentItem.breathRate}
               </div>
-              <div className={styles.innerGridText}>93/82</div>
+              <div className={styles.innerGridText}>{Math.floor(Math.random() * 100)}</div>
               <div
                 className={styles.innerGridText}
                 style={{ position: "relative", left: "20px" }}

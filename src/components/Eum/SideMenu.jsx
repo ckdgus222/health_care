@@ -4,7 +4,7 @@ import ClinicInf from "./components/ClinicInf";
 import NotificationSettings from "./components/NotificationSettings";
 import useToggleMenu from "../../hooks/useToggleMenu";
 
-const SideMenu = () => {
+const SideMenu = ({setFooterMessage}) => {
   const {select,animation,toggleMenu} = useToggleMenu()
 
  
@@ -12,7 +12,7 @@ const SideMenu = () => {
   return (
     <>
       <PatientSettings option={{ select, animation, toggleMenu }} />
-      <ClinicInf option={{ select, animation, toggleMenu }} />
+      <ClinicInf option={{ select, animation, toggleMenu,setFooterMessage }} />
       <NotificationSettings option={{select,animation,toggleMenu}}/>
     </>
   );

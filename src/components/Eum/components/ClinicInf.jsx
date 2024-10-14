@@ -1,10 +1,9 @@
-import { useContext } from "react"
-import { FooterMessageContext } from "../../../pages/Eum"
+
+
 import styles from "./ClinicInf.module.css"
 
 const ClinicInf = ({option}) =>{
-   const {select,animation,toggleMenu} = option
-   const {setFooterMessage} = useContext(FooterMessageContext)  
+   const {select,animation,toggleMenu,setFooterMessage} = option
    const footerProps = (e) => {
     setFooterMessage(e.target.value);
    };

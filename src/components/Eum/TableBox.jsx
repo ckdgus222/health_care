@@ -3,7 +3,7 @@ import SideMenu from "./SideMenu";
 import { useRef } from "react";
 import { useEffect } from "react";
 
-const TableBox = ({ tempData,footerMessage,setFooterMessage }) => {
+const TableBox = ({ tempData }) => {
   const tableRef = useRef(null);
    
 
@@ -22,7 +22,6 @@ const TableBox = ({ tempData,footerMessage,setFooterMessage }) => {
 
   return (
     <div className={styles.tableContainer}>
-            <SideMenu footerMessage={footerMessage} setFooterMessage={setFooterMessage}/>
             <div id="table1" className={styles.tableWrapper}>
                 <div className={styles.table}>
                     <div className={styles.tableHeader}>

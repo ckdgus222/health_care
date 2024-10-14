@@ -2,9 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// https://vitejs.dev/config/
-
-// 아이콘 이미지 사이즈 변경 옵션
 export default defineConfig({
   plugins: [
     react(),
@@ -14,7 +11,7 @@ export default defineConfig({
         name: 'Endo',
         short_name: 'care',
         start_url: "/",
-        display:"fullscreen",
+        display: "fullscreen",
         description: 'health_care',
         theme_color: '#ffffff',
         icons: [
