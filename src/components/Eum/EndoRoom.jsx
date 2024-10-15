@@ -27,8 +27,8 @@ const EndoRoom = ({ tempData, setTempData }) => {
   // MQTT 셋팅 리팩토링 커스텀훅 제작
   const [message, move] = useMqtt();
 
-  // console.log(move);
-  // console.log(message)
+
+  console.log(message)
 
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)

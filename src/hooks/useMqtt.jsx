@@ -36,13 +36,24 @@ const useMqtt = () =>{
 
     client.on("message", (topic, payload) => {
       const receivedMessage = payload.toString();
-      console.log(receivedMessage)
-      const jsonMessage = JSON.parse(receivedMessage);
-      
-      if(topic === "more/hbm2"){
-        setMessage(jsonMessage);     
-      }else if(topic === "more/pose2"){
-        setMove(jsonMessage)
+     
+  
+      try {
+        const jsonMessage = JSON.parse(receivedMessage);
+
+        if (topic === "more/hbm2") {
+          setMessage((prevMessage) => ({
+            ...prevMessage,
+            ...jsonMessage,
+          }));
+        } else if (topic === "more/pose2") {
+          setMove((prevMove) => ({
+            ...prevMove,
+            ...jsonMessage,
+          }));
+        }
+      } catch (error) {
+        console.error("Error parsing JSON:", error);
       }
       
     });
