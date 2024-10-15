@@ -42,15 +42,9 @@ const useMqtt = () =>{
         const jsonMessage = JSON.parse(receivedMessage);
 
         if (topic === "more/hbm2") {
-          setMessage((prevMessage) => ({
-            ...prevMessage,
-            ...jsonMessage,
-          }));
+          setMessage(jsonMessage);
         } else if (topic === "more/pose2") {
-          setMove((prevMove) => ({
-            ...prevMove,
-            ...jsonMessage,
-          }));
+          setMove(jsonMessage);
         }
       } catch (error) {
         console.error("Error parsing JSON:", error);

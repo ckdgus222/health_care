@@ -29,6 +29,7 @@ const EndoRoom = ({ tempData, setTempData }) => {
 
 
   console.log(message)
+  console.log(move)
 
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)
