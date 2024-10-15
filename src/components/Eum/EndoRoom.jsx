@@ -27,6 +27,9 @@ const EndoRoom = ({ tempData, setTempData }) => {
   // MQTT 셋팅 리팩토링 커스텀훅 제작
   const [message, move] = useMqtt();
 
+  // console.log(move);
+  // console.log(message)
+
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)
 
@@ -169,11 +172,37 @@ const EndoRoom = ({ tempData, setTempData }) => {
 
           // For the 0th and 1st items, update positionStatus and barStatus from mqttData
           if (i === 0) {
-            currentItem.positionStatus = message.pose;
-            currentItem.barStatus = message.rail;
-            currentItem.ecgRate = move.heart;
-            currentItem.breathRate = move.breath;
-            currentItem.move = move.move;
+            currentItem.positionStatus = move.pose || null;
+            currentItem.barStatus = move.rail;
+            currentItem.ecgRate = message.heart;
+            currentItem.breathRate = message.breath;
+            currentItem.move = message.move;
+          }
+
+          const sitAstride = (positionStatus) => {
+            if (
+              currentItem.positionStatus === "po12_sitl" &&
+              currentItem.barStatus === "01"
+            ) {
+              return "m30C";
+            } else if (
+              currentItem.positionStatus === "po13_sitr" &&
+              currentItem.barStatus === "10"
+            ) {
+              return "m31d";
+            } else {
+              return poseData(positionStatus);
+            }
+          };
+
+          let imgStyle;
+
+          if (currentItem.positionStatus === "p01_null") {
+            imgStyle = { display: "none" }; // positionStatus가 없을 때 이미지 숨기기
+          } else if (item.positionStatus === "m30C") {
+            imgStyle = { position: "absolute", width: "50px", top: "2%" };
+          } else {
+            imgStyle = { position: "absolute", width: "150px", height: "80px" };
           }
 
           return (
@@ -187,13 +216,15 @@ const EndoRoom = ({ tempData, setTempData }) => {
               key={currentItem.patNumber}
               onClick={() => handlePatientClick(i)}
             >
-              <div
-                className={`${styles.innerGridImg}`}
-               
-              >
-                <img style={item.positionStatus === "m30C" ? {position: "absolute",width: "50px" ,top:"2%"} : {position:"absolute",width:"150px",height:"80px"}}  src={`/images/Image/${i === 0 ? poseData(currentItem.positionStatus) : item.positionStatus}.${i === 1 && item.positionStatus === "m30C" ? "png" : "gif"  }`} alt="" />
+              <div className={`${styles.innerGridImg}`}>
                 <img
-                 style={{height:"80%"}} src={`/images/Back-img/bed/${i === 0 ? barData(currentItem.barStatus) : item.barStatus}.png`}
+                  style={imgStyle}
+                  src={`/images/Image/${i === 0 ? sitAstride(currentItem.positionStatus) : item.positionStatus}.${i === 1 && item.positionStatus === "m30C" ? "png" : "gif"}`}
+                  alt=""
+                />
+                <img
+                  style={{ height: "80%" }}
+                  src={`/images/Back-img/bed/${i === 0 ? barData(currentItem.barStatus) : item.barStatus}.png`}
                   alt=""
                 />
               </div>
@@ -228,7 +259,7 @@ const EndoRoom = ({ tempData, setTempData }) => {
               <div className={styles.innerGridText} style={{ color: "red" }}>
                 {currentItem.breathRate}
               </div>
-              <div className={styles.innerGridText}>{Math.floor(Math.random() * 100)}</div>
+              <div className={styles.innerGridText}></div>
               <div
                 className={styles.innerGridText}
                 style={{ position: "relative", left: "20px" }}

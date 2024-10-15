@@ -27,7 +27,7 @@ const useMqtt = () =>{
 
     client.on("connect", () => {
       //topic
-      client.subscribe(["more/hbm","more/pose"], (err) => {
+      client.subscribe(["more/hbm2","more/pose2"], (err) => {
         if (err) {
           console.error("err");
         }
@@ -36,11 +36,12 @@ const useMqtt = () =>{
 
     client.on("message", (topic, payload) => {
       const receivedMessage = payload.toString();
+      console.log(receivedMessage)
       const jsonMessage = JSON.parse(receivedMessage);
       
-      if(topic === "more/test"){
+      if(topic === "more/hbm2"){
         setMessage(jsonMessage);     
-      }else if(topic === "moreiot"){
+      }else if(topic === "more/pose2"){
         setMove(jsonMessage)
       }
       
