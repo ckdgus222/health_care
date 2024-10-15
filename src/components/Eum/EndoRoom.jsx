@@ -189,12 +189,11 @@ const EndoRoom = ({ tempData, setTempData }) => {
             >
               <div
                 className={`${styles.innerGridImg}`}
-                style={{
-                  backgroundImage: `url(/images/Image/${i === 0 ? poseData(currentItem.positionStatus) : item.positionStatus}.gif)`,
-                }}
+               
               >
+                <img style={item.positionStatus === "m30C" ? {position: "absolute",width: "50px" ,top:"2%"} : {position:"absolute",width:"150px",height:"80px"}}  src={`/images/Image/${i === 0 ? poseData(currentItem.positionStatus) : item.positionStatus}.${i === 1 && item.positionStatus === "m30C" ? "png" : "gif"  }`} alt="" />
                 <img
-                  src={`/images/Back-img/bed/${i === 0 ? barData(currentItem.barStatus) : item.barStatus}.png`}
+                 style={{height:"80%"}} src={`/images/Back-img/bed/${i === 0 ? barData(currentItem.barStatus) : item.barStatus}.png`}
                   alt=""
                 />
               </div>

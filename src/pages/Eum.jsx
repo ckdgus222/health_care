@@ -1,12 +1,11 @@
 import styles from "./Enm.module.css";
 import EndoRoom from "../components/Eum/EndoRoom";
 import TableBox from "../components/Eum/TableBox";
-import EndoFooter from "../components/Eum/EndoFooter";
 import FooterContainer from "../components/Eum/FooterCotainer";
 import { Health } from "../App";
-import { createContext, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
-import SideMenu from "../components/Eum/SideMenu";
+
 
 const Eum = () => {
   const { data } = useContext(Health);

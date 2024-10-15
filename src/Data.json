@@ -54,7 +54,7 @@
         "infusionDevice": "I0002",
         "emptyStatus": "yes",
         "barStatus": "01",
-        "positionStatus": "m10a",
+        "positionStatus": "m30C",
         "ecgRate": 83,
         "breathRate": 19,
         "fluidOrder": "",
