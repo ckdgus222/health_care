@@ -8,6 +8,19 @@
    flex-direction: column;
    
 }
+.menu{
+   position: absolute;
+   display: inline-block;
+   right: 30px;
+   top: 30px;
+   opacity: 0;
+}
+.menu:hover{
+   opacity: 1;
+}
+.menu img{
+   width: 30px;
+}
 
 .tableWrapper {
    flex: 1;

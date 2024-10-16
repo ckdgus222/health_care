@@ -15,6 +15,7 @@ const NotificationSettings = ({option}) => {
       </div>
       {select === "room" && (
         <div className={styles.navContent}>
+          <div>고정멘트</div>
           <div>알림 조건(추가/삭제)</div>
           <div>소리사용 유무</div>
           <div>알림UI선택</div>

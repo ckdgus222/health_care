@@ -18,18 +18,13 @@ const EndoRoom = ({ tempData, setTempData }) => {
   const [currentValue, setCurrentValue] = useState(tempData.map(() => 0));
   const [recoveryOut, setRecoveryOut] = useState(tempData.map(() => 0));
   const [selectedPatient, setSelectedPatient] = useState([]);
-  // 여러 환자 위급 상황이있을때 객체로 상태를 보관 방법 생각
-  // const [emergency, setEmergency] = useState({
-  //   NORMAL: false,
-  //   LEVEL_1_EMERGENCY: tempData.condition,
-  // })
+ 
 
   // MQTT 셋팅 리팩토링 커스텀훅 제작
   const [message, move] = useMqtt();
-
-
   console.log(message)
   console.log(move)
+
 
   const totalDuration = 120; // 회복시간 120분 기준
   const intervalTime = 10; // 애니메이션 단계 (10분씩 증가)

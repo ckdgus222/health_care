@@ -2,6 +2,7 @@ import styles from "./Enm.module.css";
 import EndoRoom from "../components/Eum/EndoRoom";
 import TableBox from "../components/Eum/TableBox";
 import FooterContainer from "../components/Eum/FooterCotainer";
+import Preferences from "../components/Eum/components/Preferences";
 import { Health } from "../App";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
@@ -10,6 +11,7 @@ import { useState } from "react";
 const Eum = () => {
   const { data } = useContext(Health);
   const [tempData, setTempData] = useState(data);
+  const [modalOn,setModalOn] = useState(false)
 
   //엔드포인트 커스텀처리
   const [ward, setWard] = useState();
@@ -51,6 +53,7 @@ const Eum = () => {
     fetchs();
   }, []);
 
+
   // Eum Box 데이터 < slice 사용 x
   const tempDataSlice = tempData.slice(0, 15);
   //data.slice(0,10)
@@ -58,8 +61,9 @@ const Eum = () => {
   return (
     <>
       <div className={styles.eumContainer}>
+        {modalOn && <Preferences setModalOn={setModalOn}/>}
         <EndoRoom tempData={tempDataSlice} setTempData={setTempData} />
-        <TableBox tempData={tempDataSlice} />
+        <TableBox tempData={tempDataSlice} setModalOn={setModalOn}/>
         <FooterContainer />
       </div>
     </>
