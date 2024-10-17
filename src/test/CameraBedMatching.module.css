@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 560px;
+    height: 360px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 560px;
+    gap: 10px;
+}
+
+.section {
+    flex: 1;
+    min-width: 120px;
+    max-width: 150px;
+}
+
+.matchingSection {
+    flex: 1;
+    min-width: 120px;
+    max-width: 150px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.selectedItem {
+    background-color: #e0e0e0;
+}
+
+.input {
+    width: calc(100% - 20px);
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.button {
+    padding: 5px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.matchedList {
+    width: 100%;
+    max-width: 560px;
+    margin-top: 10px;
+}
+
+.matchedItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+}
+
+.deleteButton {
+    padding: 3px 5px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section, .matchingSection {
+        max-width: 100%;
+    }
+    .matchedList {
+        max-width: 100%;
+    }
+}

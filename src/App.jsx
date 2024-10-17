@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 // 각 기기별 페이지 컴포넌트
 import RoomMain from "./Desktop/pages/RoomMain.jsx";
 import Eum from "./Desktop/pages/Eum.jsx";
+import CameraBedMatching from "./test/CameraBedMatching.jsx";
 
 // 데이터 파일들
 import data from './Data.json';
@@ -39,15 +40,18 @@ function App() {
                     {isDesktop && (
                         <>
                             <Route path="/" element={<MainPortal />} />
+                            <Route path="/CameraBedMatching" element={<CameraBedMatching />} />
                             <Route path="/roommain" element={<RoomMain />} />
                             <Route path="/eum" element={<Eum />} />
                             <Route path="/hospitalfloor" element={<HospitalFloorDemo />} />
+                            <Route path="/hospitalfloortest" element={<HospitalFloorTest />} />
                             <Route path="/hospitalfloortest" element={<HospitalFloorTest />} />
                         </>
                     )}
                     {isTablet && (
                         <>
                             <Route path="/" element={<MainPortal />} />
+                            <Route path="/CameraBedMatching" element={<CameraBedMatching />} />
                             <Route path="/roommain" element={<RoomMain />} />
                             <Route path="/eum" element={<Eum />} />
                             <Route path="/hospitalfloor" element={<HospitalFloor />} />
