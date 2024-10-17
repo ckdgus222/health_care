@@ -1,38 +1,75 @@
-import RoomMain from "./pages/RoomMain";
-import Acting from "./pages/Acting";
-import Eum from "./pages/Eum";
-import Begin from "./pages/Begin.jsx";
-import EndoScope from "./pages/EndoScope.jsx";
-import "./App.css";
-import { createContext } from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { createContext, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
+
+// 각 기기별 페이지 컴포넌트
+import RoomMain from "./Desktop/pages/RoomMain.jsx";
+import Eum from "./Desktop/pages/Eum.jsx";
+import CameraBedMatching from "./test/CameraBedMatching.jsx";
+
 import data from "./Data.json";
 import roomData from "./Room.json";
 import equipmentData from "./Equipment.json";
-import { useState } from "react";
 
-//react router 설치
+import "./App.css";
 
+// 데이터 파일들
+import data from './Data.json';
+import roomData from './Room.json';
+import equipmentData from './Equipment.json';
+
+// 스타일
+import './App.css';
+import HospitalFloor from "./Tablet/pages/HospitalFloor/HospitalFloor.jsx";
+import HospitalFloorDemo from "./Tablet/pages/HospitalFloorDemo/HospitalFloorDemo.jsx";
+import HospitalFloorTest from "./test/HospitalFloorTest.jsx";
+import MainPortal from "./Common/pages/MainPortal.jsx";
+
+// 컨텍스트 생성
 export const Health = createContext(undefined);
 export const Selected = createContext(undefined);
 
 function App() {
-  const [category, setCategory] = useState("");
+    // 상태 관리
+    const [category, setCategory] = useState("");
 
-  return (
-    <Health.Provider value={{ data, roomData, equipmentData }}>
-      <Selected.Provider value={{ category, setCategory }}>
-        <Routes>
-          <Route path="/" element={<Begin />} />
-          <Route path="/endo" element={<EndoScope/>}/>
-          <Route path="/endoScope" element={<EndoScope/>}/>
-          <Route path="/roomMain" element={<RoomMain />} />
-          <Route path="/acting" element={<Acting />} />
-          <Route path="/eum" element={<Eum />} />
-        </Routes>
-      </Selected.Provider>
-    </Health.Provider>
-  );
+    // 미디어 쿼리 설정
+    const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
+    const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1023px)' });
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
+    return (
+        <Health.Provider value={{ data, roomData, equipmentData }}>
+            <Selected.Provider value={{ category, setCategory }}>
+                {/* 라우팅만 남겨두고, BrowserRouter는 main.jsx에서 사용하므로 제거 */}
+                <Routes>
+                    {isDesktop && (
+                        <>
+                            <Route path="/" element={<MainPortal />} />
+                            <Route path="/CameraBedMatching" element={<CameraBedMatching />} />
+                            <Route path="/roommain" element={<RoomMain />} />
+                            <Route path="/eum" element={<Eum />} />
+                            <Route path="/hospitalfloor" element={<HospitalFloorDemo />} />
+                            <Route path="/hospitalfloortest" element={<HospitalFloorTest />} />
+                            <Route path="/hospitalfloortest" element={<HospitalFloorTest />} />
+                        </>
+                    )}
+                    {isTablet && (
+                        <>
+                            <Route path="/" element={<MainPortal />} />
+                            <Route path="/CameraBedMatching" element={<CameraBedMatching />} />
+                            <Route path="/roommain" element={<RoomMain />} />
+                            <Route path="/eum" element={<Eum />} />
+                            <Route path="/hospitalfloor" element={<HospitalFloor />} />
+                        </>
+                        )
+                    }
+                    <Route path="/" element={<MainPortal />} />
+                    {isMobile && <Route path="/" element={<MainPortal />} />}
+                </Routes>
+            </Selected.Provider>
+        </Health.Provider>
+    );
 }
 
 export default App;

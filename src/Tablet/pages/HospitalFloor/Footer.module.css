@@ -1,0 +1,70 @@
+.footer {
+    background-color: #0a1b2a;
+    display: flex;
+    width: 100%;
+    gap: 40px 66px;
+    overflow: hidden;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 13px 22px 13px 80px;
+}
+
+@media (max-width: 991px) {
+    .footer {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.hospitalStatusContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    font-size: 15px;
+    color: #fff;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: auto 0;
+}
+
+.statusItem {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    overflow: hidden;
+    font-size: 13px;
+    color: #000;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.footerButton {
+    align-self: stretch;
+    border-radius: 5px;
+    background-color: #ccc;
+    min-height: 24px;
+    gap: 10px;
+    overflow: hidden;
+    width: 100px;
+    padding: 0 18px;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+}
+
+@media (max-width: 991px) {
+    .footerButton {
+        white-space: initial;
+    }
+}

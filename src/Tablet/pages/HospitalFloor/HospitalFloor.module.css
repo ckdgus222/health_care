@@ -1,0 +1,45 @@
+.roomMain {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content {
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: flex-start;
+    flex: 1;
+    height: 100%;
+}
+
+@media (max-width: 991px) {
+    .content {
+        max-width: 100%;
+    }
+}
+
+.hospitalFloor {
+    background-color: #000;
+    display: flex;
+    min-width: 240px;
+    width: 100%;
+    align-items: flex-start;
+    overflow: hidden;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    flex: 1;
+    flex-basis: 0%;
+    padding: 10px;
+}
+
+@media (max-width: 991px) {
+    .hospitalFloor {
+        max-width: 100%;
+    }
+}

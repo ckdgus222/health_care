@@ -1,0 +1,73 @@
+.portalContainer {
+    display: inline-block;
+    align-items: center;
+    background-color: #2d2525; /* Dark background color */
+    width: 100vw;
+    height: 100vh;
+}
+
+.logoContainer {
+    width: 100vw;
+    height: 15vh;
+    padding-top: 2vh;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    color: #ee763e; /* Orange color */
+    margin-bottom: 20px;
+    font-size: calc(min(7vw, 7vh));
+}
+
+.serviceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.servicesGrid {
+    width: 60vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #3c2b2b; /* Slightly lighter box color */
+    padding: 3vw;
+    border-radius: 10px;
+    border: 1px solid #ee763e;
+    justify-items: center;
+}
+
+.serviceItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.serviceItem:hover {
+    transform: scale(1.1);
+}
+
+.serviceItem:hover .icon {
+    filter: brightness(0.8);
+}
+
+.icon {
+    width: min(15vw, 15vh);  /* 가로와 세로 중 작은 값으로 아이콘 크기를 조정 */
+    height: auto; /* 비율 유지 */
+    padding: 1vw;
+}
+
+
+.serviceText {
+    width: min(15vw, 15vh);
+    color: #ee763e; /* Orange color */
+    /*font-size: min(2vw, 4.6vh);*/
+    text-align: center;
+    font-size: calc(min(3vw, 3vh));
+}
