@@ -1,12 +1,12 @@
 import mqtt from "mqtt";
 import {useState, useEffect} from "react";
-import { poseData,barData } from "../util/mqttData";
+import { poseData,barData } from "../Common/util/mqttData.js";
 
 const useMqtt = () =>{
       // MQTT 셋팅 리팩토링 커스텀훅 제작
   const [message, setMessage] = useState({});
   const [move, setMove] = useState({});
-  
+
   const [imgName, setImgName] = useState("defaultImage");
   const [barImg, setBarImg] = useState("undefined");
 
@@ -36,8 +36,8 @@ const useMqtt = () =>{
 
     client.on("message", (topic, payload) => {
       const receivedMessage = payload.toString();
-     
-  
+
+
       try {
         const jsonMessage = JSON.parse(receivedMessage);
 
@@ -49,7 +49,7 @@ const useMqtt = () =>{
       } catch (error) {
         console.error("Error parsing JSON:", error);
       }
-      
+
     });
 
     client.on("error", (err) => {
@@ -65,7 +65,7 @@ const useMqtt = () =>{
   }, []);
 
 
- 
+
 
   useEffect(() => {
     const newImgName = poseData();
@@ -75,7 +75,7 @@ const useMqtt = () =>{
     setBarImg(newBarImg);
   }, [message,move]);
 
-  
+
   return [message,move]
 
 }

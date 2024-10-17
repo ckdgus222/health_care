@@ -1,13 +1,13 @@
 import React from "react";
-import PatientSettings from "./components/PatientSettings";
-import ClinicInf from "./components/ClinicInf";
-import NotificationSettings from "./components/NotificationSettings";
-import useToggleMenu from "../../hooks/useToggleMenu";
+import PatientSettings from "./PatientSettings.jsx";
+import ClinicInf from "./ClinicInf.jsx";
+import NotificationSettings from "./NotificationSettings.jsx";
+import useToggleMenu from "../../../hooks/useToggleMenu";
 
 const SideMenu = ({setFooterMessage}) => {
   const {select,animation,toggleMenu} = useToggleMenu()
 
- 
+
 
   return (
     <>

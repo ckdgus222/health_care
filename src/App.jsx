@@ -7,10 +7,6 @@ import RoomMain from "./Desktop/pages/RoomMain.jsx";
 import Eum from "./Desktop/pages/Eum.jsx";
 import CameraBedMatching from "./test/CameraBedMatching.jsx";
 
-import data from "./Data.json";
-import roomData from "./Room.json";
-import equipmentData from "./Equipment.json";
-
 import "./App.css";
 
 // 데이터 파일들

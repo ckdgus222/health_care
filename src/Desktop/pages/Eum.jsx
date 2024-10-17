@@ -2,8 +2,8 @@ import styles from "./Enm.module.css";
 import EndoRoom from "../components/Eum/EndoRoom";
 import TableBox from "../components/Eum/TableBox";
 import FooterContainer from "../components/Eum/FooterCotainer";
-import Preferences from "../components/Eum/components/Preferences";
-import { Health } from "../App";
+import Preferences from "../components/Eum/Preferences.jsx";
+import { Health } from "../../App.jsx";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
 
