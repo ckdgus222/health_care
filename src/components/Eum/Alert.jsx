@@ -4,6 +4,7 @@ import { memo } from "react";
 
 const Alert = ({ item, selectedPatient, currentValue, totalDuration, recoveryOut, onConfirm }) => {
    
+  console.log("push")
 
 
   return (
